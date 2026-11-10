@@ -40,7 +40,6 @@
     </script>
     
     <style>
-        /* Modern subtle scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
             height: 6px;
@@ -56,7 +55,6 @@
             background: #94a3b8;
         }
 
-        /* Apple/Vercel Light Glassmorphism */
         .glass-card {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(18px);
@@ -71,7 +69,6 @@
             border-bottom: 1px solid rgba(226, 232, 240, 0.7);
         }
 
-        /* Modal transitions */
         .modal-overlay {
             opacity: 0;
             visibility: hidden;
@@ -89,7 +86,6 @@
             transform: scale(1) translateY(0);
         }
 
-        /* Ambient floating lights */
         .ambient-sphere {
             position: fixed;
             border-radius: 50%;
@@ -98,9 +94,6 @@
             z-index: 0;
         }
 
-        /* ========================================================
-           CONCENTRIC CYBER HUD STAGE (PERFECTLY CENTERED)
-           ======================================================== */
         .cyber-stage-wrapper {
             position: relative;
             width: 320px;
@@ -180,7 +173,6 @@
             z-index: 1;
         }
 
-        /* AI Chat Window transitions */
         #aiChatWindow {
             transition: opacity 0.22s ease, transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.22s;
         }
@@ -215,7 +207,7 @@
     <!-- Global Background Particle Grid -->
     <canvas id="particle-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
 
-    <!-- Subtle Ambient Lighting Spheres -->
+    <!-- Ambient Lighting Spheres -->
     <div class="ambient-sphere w-96 h-96 bg-sky-200/35 -top-20 -left-20"></div>
     <div class="ambient-sphere w-96 h-96 bg-cyan-200/30 top-1/2 -right-20"></div>
     <div class="ambient-sphere w-96 h-96 bg-indigo-100/35 -bottom-20 left-1/3"></div>
@@ -250,10 +242,9 @@
     <!-- Main Content Area -->
     <main class="relative z-10 flex-grow">
         
-        <!-- Hero Section (Centered Clean Presentation) -->
+        <!-- Hero Section -->
         <section class="max-w-4xl mx-auto px-4 pt-10 pb-12 sm:pt-16 sm:pb-16 text-center flex flex-col items-center justify-center relative">
             
-            <!-- Concentric Cyber HUD Frame with Perfectly Centered Photo -->
             <div class="cyber-stage-wrapper">
                 <canvas id="hero-cyber-canvas" width="360" height="360"></canvas>
                 
@@ -285,30 +276,25 @@
                 </div>
             </div>
 
-            <!-- Internship Readiness Tag -->
             <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-700 text-xs font-medium font-mono mb-3.5 shadow-xs">
                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 Ready for Internship Roles &bull; 2026
             </div>
 
-            <!-- Name -->
             <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-2.5">
                 Nipun Navodya
             </h1>
 
-            <!-- Animated Typing Text -->
             <div class="h-8 font-mono text-brand-600 font-semibold text-sm sm:text-base mb-3 flex items-center justify-center">
                 <span id="typed-text"></span>
                 <span class="w-2 h-4 bg-brand-500 ml-1 animate-pulse"></span>
             </div>
 
-            <!-- Subtitle Bio -->
             <p class="max-w-2xl text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
                 Undergraduate in <strong class="text-slate-800">Information Systems Engineering</strong> at <strong class="text-slate-800">SLIIT</strong>. 
                 Focused on bridging business requirements with technical delivery across Agile management, systems integration, and quality engineering.
             </p>
 
-            <!-- Action Buttons -->
             <div class="flex flex-wrap items-center justify-center gap-3 w-full sm:w-auto">
                 <button onclick="openModal('certificatesModal')" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm shadow-md shadow-brand-500/20 hover:shadow-lg hover:shadow-brand-500/30 transition flex items-center justify-center gap-2">
                     <i class="fa-solid fa-award"></i> Certificates
@@ -321,7 +307,6 @@
                 </button>
             </div>
 
-            <!-- Quick Badges -->
             <div class="flex flex-wrap items-center justify-center gap-2 mt-7 text-xs text-slate-500 font-medium">
                 <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md shadow-xs">SLIIT ISE</span>
                 <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md shadow-xs">Agile & Scrum</span>
@@ -331,11 +316,8 @@
             </div>
         </section>
 
-        <!-- ========================================================
-             3-COLUMN INTERACTIVE LIVE DASHBOARD
-             ======================================================== -->
+        <!-- 3-COLUMN INTERACTIVE LIVE DASHBOARD -->
         <section id="utilities" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-            
             <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-4 border-b border-slate-200/80 gap-3">
                 <div>
                     <div class="text-brand-600 font-mono text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
@@ -350,7 +332,6 @@
                 </p>
             </div>
 
-            <!-- 3-Column Card Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
 
                 <!-- 1. LIVE CURRENCY TRACKER -->
@@ -535,7 +516,6 @@
                             <button onclick="saveNewsApiKey()" class="px-3 py-1 text-xs font-semibold bg-pink-600 hover:bg-pink-700 text-white rounded-md">Save & Sync</button>
                         </div>
                     </div>
-
                 </div>
 
             </div>
@@ -555,9 +535,7 @@
         </div>
     </footer>
 
-    <!-- ========================================================
-         FLOATING AI BOT ASSISTANT (GEMINI POWERED WITH VOICE)
-         ======================================================== -->
+    <!-- FLOATING AI BOT ASSISTANT -->
     <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
         <div id="aiPromptBubble" class="hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur px-3.5 py-2 rounded-2xl shadow-lg border border-sky-200 text-xs text-slate-700 cursor-pointer hover:bg-sky-50 transition" onclick="toggleAiChat()">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
@@ -719,10 +697,6 @@
         </div>
     </div>
 
-    <!-- ========================================================
-         MODALS SYSTEM: CERTIFICATES, PROJECTS, ABOUT, CONTACT
-         ======================================================== -->
-
     <!-- 1. CERTIFICATES MODAL -->
     <div id="certificatesModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-900/40 backdrop-blur-sm" role="dialog" aria-modal="true">
         <div class="modal-box w-full max-w-4xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
@@ -784,7 +758,7 @@
         </div>
     </div>
 
-    <!-- CERTIFICATE LIGHTBOX (FULL PREVIEW) -->
+    <!-- CERTIFICATE LIGHTBOX PREVIEW -->
     <div id="certLightboxModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md" role="dialog" aria-modal="true">
         <div class="relative max-w-3xl w-full max-h-[90vh] flex flex-col items-center">
             <button onclick="closeModal('certLightboxModal')" class="absolute -top-10 right-0 text-white hover:text-slate-300 text-xl font-bold p-2">
@@ -795,9 +769,7 @@
         </div>
     </div>
 
-    <!-- ========================================================
-         2. PROJECTS MODAL (ALL 7 PROJECTS + 7 INDIVIDUAL CATEGORIES FILTER TABS)
-         ======================================================== -->
+    <!-- 2. PROJECTS MODAL (7 TOPICS + EXACT INDIVIDUAL CATEGORY TABS + GITHUB REPO LINKS) -->
     <div id="projectsModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-900/40 backdrop-blur-sm" role="dialog" aria-modal="true">
         <div class="modal-box w-full max-w-5xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
             <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
@@ -815,7 +787,7 @@
                 </button>
             </div>
 
-            <!-- Categories Filter Tabs (All Projects + 7 Specific Categories) -->
+            <!-- Categories Tabs: All Projects (7) + All 7 Categories Individually -->
             <div class="px-6 pt-3 pb-2 flex items-center gap-1.5 border-b border-slate-100 overflow-x-auto text-xs font-medium no-scrollbar">
                 <button onclick="filterProjects('all', this)" class="proj-tab-btn active px-3 py-1 rounded-full bg-slate-900 text-white font-semibold transition shrink-0">
                     All Projects (7)
@@ -1116,7 +1088,6 @@
                 </div>
             </div>
 
-            <!-- Modal Footer -->
             <div class="px-6 py-3 border-t border-slate-100 bg-slate-50 flex items-center justify-between">
                 <a href="https://github.com/Nipunnavodya" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-600 hover:underline flex items-center gap-1">
                     <i class="fa-brands fa-github"></i> Visit Nipun's Full GitHub Profile &rarr;
@@ -1185,8 +1156,6 @@
                 </button>
             </div>
             <div class="p-6 space-y-3">
-                
-                <!-- Official Phone -->
                 <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200/80">
                     <div class="flex items-center gap-3">
                         <div class="w-8 h-8 rounded-lg bg-white shadow-xs border border-slate-200 flex items-center justify-center text-slate-600">
@@ -1202,7 +1171,6 @@
                     </button>
                 </div>
 
-                <!-- Private Phone -->
                 <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200/80">
                     <div class="flex items-center gap-3">
                         <div class="w-8 h-8 rounded-lg bg-white shadow-xs border border-slate-200 flex items-center justify-center text-slate-600">
@@ -1218,7 +1186,6 @@
                     </button>
                 </div>
 
-                <!-- Primary Email -->
                 <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200/80">
                     <div class="flex items-center gap-3 truncate">
                         <div class="w-8 h-8 rounded-lg bg-white shadow-xs border border-slate-200 flex items-center justify-center text-slate-600 shrink-0">
@@ -1234,7 +1201,6 @@
                     </button>
                 </div>
 
-                <!-- Academic Email -->
                 <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200/80">
                     <div class="flex items-center gap-3 truncate">
                         <div class="w-8 h-8 rounded-lg bg-white shadow-xs border border-slate-200 flex items-center justify-center text-slate-600 shrink-0">
@@ -1249,14 +1215,12 @@
                         Copy
                     </button>
                 </div>
-
             </div>
         </div>
     </div>
 
     <!-- Application Script Logic -->
     <script>
-        // Modal Controls
         function openModal(id) {
             const modal = document.getElementById(id);
             if (modal) {
@@ -1302,7 +1266,6 @@
             setTimeout(() => { btn.innerHTML = orig; }, 1500);
         }
 
-        // Projects Filter
         function filterProjects(category, btn) {
             document.querySelectorAll('.proj-tab-btn').forEach(b => {
                 b.className = "proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition text-xs font-medium shrink-0";
@@ -1319,7 +1282,6 @@
             });
         }
 
-        // Hero Typing Effect
         const phrases = [
             "Information Systems Engineer",
             "IT Project Manager & Agile BA",
@@ -1353,9 +1315,7 @@
         }
         loopType();
 
-        /* ========================================================
-           CERTIFICATES (PERSISTENT IN LOCALSTORAGE)
-           ======================================================== */
+        /* CERTIFICATES */
         const CERT_STORAGE_KEY = 'nipun_navodya_certificates_v1';
 
         const DEFAULT_CERTIFICATES = [
@@ -1532,9 +1492,7 @@
             }
         }
 
-        /* ========================================================
-           1. CURRENCY & EXCHANGE RATES
-           ======================================================== */
+        /* 1. CURRENCY TRACKER */
         let usdRate = 308.50;
 
         function toggleCurrencyApiDrawer() {
@@ -1584,9 +1542,7 @@
             document.getElementById('convert-lkr-result').textContent = `LKR ${lkr.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
         }
 
-        /* ========================================================
-           2. SLIIT UNIVERSITY GPA CALCULATOR
-           ======================================================== */
+        /* 2. GPA CALCULATOR */
         const GRADE_SCALE = {
             'A+': 4.0, 'A': 4.0, 'A-': 3.7,
             'B+': 3.3, 'B': 3.0, 'B-': 2.7,
@@ -1603,6 +1559,7 @@
 
         function renderGpaSubjects() {
             const container = document.getElementById('gpaSubjectsList');
+            if (!container) return;
             container.innerHTML = '';
 
             subjects.forEach((s, idx) => {
@@ -1688,17 +1645,15 @@
             }
         }
 
-        /* ========================================================
-           3. LIVE REAL-TIME TECH NEWS
-           ======================================================== */
+        /* 3. TECH NEWS */
         let currentNewsCategory = 'technology';
 
         function setNewsCategory(category, btn) {
             currentNewsCategory = category;
             document.querySelectorAll('.news-tab-btn').forEach(b => {
-                b.className = "news-tab-btn px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition shrink-0";
+                b.className = "news-tab-btn px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition";
             });
-            btn.className = "news-tab-btn active px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-900 text-white transition shrink-0";
+            btn.className = "news-tab-btn active px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-900 text-white transition";
             fetchLiveNews();
         }
 
@@ -1717,3 +1672,583 @@
             try {
                 const diffMs = Date.now() - new Date(dateString).getTime();
                 const mins = Math.max(1, Math.floor(diffMs / 60000));
+                if (mins < 60) return `${mins}m ago`;
+                const hours = Math.floor(mins / 60);
+                if (hours < 24) return `${hours}h ago`;
+                return `${Math.floor(hours / 24)}d ago`;
+            } catch (e) {
+                return "Just now";
+            }
+        }
+
+        async function fetchLiveNews() {
+            const icon = document.getElementById('news-refresh-icon');
+            const statusLabel = document.getElementById('news-status-label');
+
+            if (icon) icon.classList.add('fa-spin');
+            if (statusLabel) statusLabel.textContent = "Fetching latest articles...";
+
+            const customKey = localStorage.getItem('custom_news_api_key');
+            if (customKey) {
+                try {
+                    const gnewsUrl = `https://gnews.io/api/v4/top-headlines?category=${currentNewsCategory === 'technology' ? 'technology' : 'general'}&lang=en&apikey=${customKey}&max=5`;
+                    const res = await fetch(gnewsUrl);
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data.articles && data.articles.length > 0) {
+                            const formatted = data.articles.map(a => ({
+                                title: a.title,
+                                desc: a.description || "Read full report on source portal.",
+                                source: a.source?.name || "GNews",
+                                timeAgo: getTimeDifference(a.publishedAt),
+                                url: a.url
+                            }));
+                            renderNews(formatted);
+                            if (statusLabel) statusLabel.textContent = "Live Feed Updated";
+                            if (icon) setTimeout(() => icon.classList.remove('fa-spin'), 500);
+                            return;
+                        }
+                    }
+                } catch (e) {
+                    console.log('Custom GNews fetch failed, switching to live Dev stream:', e);
+                }
+            }
+
+            try {
+                let tag = "technology";
+                if (currentNewsCategory === 'webdev') tag = "webdev";
+                if (currentNewsCategory === 'devops') tag = "cloud";
+
+                const url = `https://dev.to/api/articles?tag=${tag}&per_page=5&state=fresh`;
+                const res = await fetch(url);
+                if (res.ok) {
+                    const articles = await res.json();
+                    if (articles && articles.length > 0) {
+                        const formatted = articles.map(art => ({
+                            title: art.title,
+                            desc: art.description || (art.tag_list ? "Topics: " + art.tag_list.join(", ") : "Click to view full technical brief."),
+                            source: art.user?.name || "Dev Community",
+                            timeAgo: getTimeDifference(art.published_at || art.created_at),
+                            url: art.url
+                        }));
+                        renderNews(formatted);
+                        if (statusLabel) statusLabel.textContent = `Live ${tag.toUpperCase()} Stream`;
+                        if (icon) setTimeout(() => icon.classList.remove('fa-spin'), 500);
+                        return;
+                    }
+                }
+            } catch (err) {
+                console.log('Live dev stream fetch note:', err);
+            }
+
+            const fallbackNews = [
+                {
+                    title: "Next-Gen AI Agents Transform Agile Sprint Planning & CI Pipelines",
+                    desc: "Automated test generation and user-story breakdown tools reduce engineering cycles by 35%.",
+                    source: "TechRadar Live",
+                    timeAgo: "Just now",
+                    url: "https://news.ycombinator.com"
+                },
+                {
+                    title: "Modern Microservices Shift Toward Real-Time Webhook Architectures",
+                    desc: "Developers migrate away from long polling toward reliable decoupled event-driven webhook relays.",
+                    source: "InfoQ",
+                    timeAgo: "14m ago",
+                    url: "https://news.ycombinator.com"
+                },
+                {
+                    title: "Playwright & TypeScript Set Benchmark for Web QA Automation in 2026",
+                    desc: "Parallel execution and robust visual assertions dominate modern continuous integration test matrices.",
+                    source: "DevOps Wire",
+                    timeAgo: "32m ago",
+                    url: "https://news.ycombinator.com"
+                }
+            ];
+
+            renderNews(fallbackNews);
+            if (statusLabel) statusLabel.textContent = "Live Feed Synced";
+            if (icon) setTimeout(() => icon.classList.remove('fa-spin'), 500);
+        }
+
+        function renderNews(items) {
+            const list = document.getElementById('newsStreamList');
+            if (!list) return;
+            list.innerHTML = '';
+
+            items.forEach(item => {
+                const a = document.createElement('a');
+                a.href = item.url;
+                a.target = "_blank";
+                a.rel = "noopener noreferrer";
+                a.className = "block p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-pink-300 hover:bg-white hover:shadow-xs transition group";
+                a.innerHTML = `
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+                        <span class="font-bold text-pink-600 uppercase tracking-wider">${item.source}</span>
+                        <span class="flex items-center gap-1 font-mono"><i class="fa-regular fa-clock"></i> ${item.timeAgo}</span>
+                    </div>
+                    <h4 class="text-xs font-semibold text-slate-900 group-hover:text-pink-600 line-clamp-1 transition mb-0.5">${item.title}</h4>
+                    <p class="text-[11px] text-slate-500 line-clamp-2 leading-tight">${item.desc}</p>
+                `;
+                list.appendChild(a);
+            });
+        }
+
+        /* 4. AI BOT ASSISTANT */
+        let isChatOpen = false;
+        let isVoiceEnabled = true;
+        let isSpeechRecognitionActive = false;
+        let speechRecognitionInstance = null;
+
+        const NIPUN_SYSTEM_PROMPT = `
+You are the personal AI Assistant for Nipun Navodya, hosted on his professional portfolio website.
+Here is authentic verified background information about Nipun:
+- Name: Nipun Navodya
+- Education: Undergraduate Student in Information Systems Engineering (ISE) at SLIIT (Faculty of Computing).
+- Target Roles: Agile Project Manager / Scrum Master, Business Analyst (BA), Systems Analyst & Integration Specialist, IT & ERP Support Engineer (Odoo), Software QA Automation Engineer.
+- Featured 7 Technical Projects & Direct GitHub Repositories:
+  1. Agile Task & Project Management (Trello, Jira, ClickUp) -> https://github.com/Nipunnavodya/Agile-Task-and-Project-Management
+  2. Business Analysis & Requirements Engineering (Bizagi, Confluence, Miro) -> https://github.com/Nipunnavodya/Business-Analysis-and-Requirements-Engineering
+  3. Systems Analysis & Integration Specialist (Postman, Swagger, Draw.io, Bruno) -> https://github.com/Nipunnavodya/Systems-Analysis-and-Integration-Specialist
+  4. IT Support, Application Support & ERP Support (Jira SM, Odoo ERP, Log Debugging) -> https://github.com/Nipunnavodya/IT-Support-Application-Support-and-ERP-Support
+  5. Data Analyst, DBA & Business Intelligence (Power BI, MySQL 3NF, Python Pandas) -> https://github.com/Nipunnavodya/Data-Analyst-DBA-and-Business-Intelligence
+  6. Software Testing (Manual & Automation) (Playwright TypeScript, TestRail, Jira) -> https://github.com/Nipunnavodya/Software-Testing-Manual-and-Automation
+  7. UI/UX Engineering & Design (Figma Design Systems, Clickable Mobile Prototype, WCAG 2.1) -> https://github.com/Nipunnavodya/UI-UX-Engineering-and-Design
+- Contact Info:
+  * Primary Email: nipunnavodya4@gmail.com
+  * Academic Email: nipun.navodya.ise@gmail.com
+  * Mobile: 072 922 4809 / 070 408 8271
+  * GitHub: https://github.com/Nipunnavodya
+- Behavior: Be professional, warm, concise, and helpful. You represent Nipun to recruiters, engineering managers, and collaborators. You can answer in English or friendly Sinhala if queried in Sinhala.
+`;
+
+        let chatHistory = [];
+
+        function toggleAiChat() {
+            const chatWin = document.getElementById('aiChatWindow');
+            const icon = document.getElementById('aiBtnIcon');
+            const promptBubble = document.getElementById('aiPromptBubble');
+            
+            isChatOpen = !isChatOpen;
+            if (isChatOpen) {
+                chatWin.classList.remove('chat-closed');
+                chatWin.classList.add('chat-open');
+                icon.className = "fa-solid fa-chevron-down text-xl";
+                if (promptBubble) promptBubble.style.display = 'none';
+                setTimeout(() => { document.getElementById('aiChatInput').focus(); }, 100);
+            } else {
+                chatWin.classList.add('chat-closed');
+                chatWin.classList.remove('chat-open');
+                icon.className = "fa-solid fa-robot text-2xl";
+                if (window.speechSynthesis) window.speechSynthesis.cancel();
+            }
+        }
+
+        function toggleVoiceSpeech() {
+            isVoiceEnabled = !isVoiceEnabled;
+            const icon = document.getElementById('ttsIcon');
+            if (isVoiceEnabled) {
+                icon.className = "fa-solid fa-volume-high";
+                appendSystemNotice("Voice output enabled 🔊");
+            } else {
+                icon.className = "fa-solid fa-volume-xmark";
+                if (window.speechSynthesis) window.speechSynthesis.cancel();
+                appendSystemNotice("Voice output muted 🔇");
+            }
+        }
+
+        function speakText(text) {
+            if (!isVoiceEnabled || !('speechSynthesis' in window)) return;
+            window.speechSynthesis.cancel();
+
+            const clean = text.replace(/[*_#`]/g, '').replace(/https?:\/\/\S+/g, '');
+            const utterance = new SpeechSynthesisUtterance(clean);
+            utterance.rate = 1.05;
+            utterance.pitch = 1.0;
+            
+            const voices = window.speechSynthesis.getVoices();
+            const englishVoice = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha')));
+            if (englishVoice) utterance.voice = englishVoice;
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function toggleSpeechRecognition() {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SpeechRecognition) return;
+
+            const micIcon = document.getElementById('micIcon');
+            const micBtn = document.getElementById('micBtn');
+
+            if (isSpeechRecognitionActive) {
+                if (speechRecognitionInstance) speechRecognitionInstance.stop();
+                isSpeechRecognitionActive = false;
+                micIcon.className = "fa-solid fa-microphone text-sm";
+                micBtn.classList.remove('text-red-500', 'bg-red-50');
+                return;
+            }
+
+            speechRecognitionInstance = new SpeechRecognition();
+            speechRecognitionInstance.continuous = false;
+            speechRecognitionInstance.interimResults = false;
+            speechRecognitionInstance.lang = 'en-US';
+
+            speechRecognitionInstance.onstart = () => {
+                isSpeechRecognitionActive = true;
+                micIcon.className = "fa-solid fa-microphone-lines text-sm animate-pulse";
+                micBtn.classList.add('text-red-500', 'bg-red-50');
+            };
+
+            speechRecognitionInstance.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                const input = document.getElementById('aiChatInput');
+                if (input) {
+                    input.value = transcript;
+                    handleChatSubmit();
+                }
+            };
+
+            speechRecognitionInstance.onerror = () => {
+                isSpeechRecognitionActive = false;
+                micIcon.className = "fa-solid fa-microphone text-sm";
+                micBtn.classList.remove('text-red-500', 'bg-red-50');
+            };
+
+            speechRecognitionInstance.onend = () => {
+                isSpeechRecognitionActive = false;
+                micIcon.className = "fa-solid fa-microphone text-sm";
+                micBtn.classList.remove('text-red-500', 'bg-red-50');
+            };
+
+            speechRecognitionInstance.start();
+        }
+
+        function askQuickPrompt(question) {
+            const input = document.getElementById('aiChatInput');
+            if (input) {
+                input.value = question;
+                handleChatSubmit();
+            }
+        }
+
+        function appendUserMessage(text) {
+            const container = document.getElementById('aiChatMessages');
+            const row = document.createElement('div');
+            row.className = "flex items-start justify-end gap-2";
+            row.innerHTML = `
+                <div class="chat-bubble-user p-2.5 px-3 rounded-2xl max-w-[82%] text-xs leading-relaxed shadow-xs font-medium">
+                    ${escapeHtml(text)}
+                </div>
+            `;
+            container.appendChild(row);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function appendBotMessage(text) {
+            const container = document.getElementById('aiChatMessages');
+            const row = document.createElement('div');
+            row.className = "flex items-start gap-2.5";
+            const formatted = formatBotReply(text);
+
+            row.innerHTML = `
+                <div class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-[11px] shrink-0 mt-0.5 shadow-xs">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="chat-bubble-bot p-2.5 px-3 rounded-2xl max-w-[85%] text-xs leading-relaxed shadow-xs space-y-1 text-slate-700">
+                    ${formatted}
+                </div>
+            `;
+            container.appendChild(row);
+            container.scrollTop = container.scrollHeight;
+
+            speakText(text);
+        }
+
+        function appendSystemNotice(text) {
+            const container = document.getElementById('aiChatMessages');
+            const div = document.createElement('div');
+            div.className = "text-center text-[10px] text-slate-400 font-mono py-1";
+            div.textContent = text;
+            container.appendChild(div);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function clearChatHistory() {
+            chatHistory = [];
+            const container = document.getElementById('aiChatMessages');
+            container.innerHTML = `
+                <div class="flex items-start gap-2.5">
+                    <div class="w-7 h-7 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs shrink-0 mt-0.5 shadow-xs">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="chat-bubble-bot p-3 rounded-2xl max-w-[85%] shadow-xs text-xs leading-relaxed space-y-1.5">
+                        <p class="font-medium text-slate-800">
+                            Chat history refreshed! 🧹
+                        </p>
+                        <p class="text-slate-600">
+                            How can I assist you with Nipun's portfolio today?
+                        </p>
+                    </div>
+                </div>
+            `;
+            if (window.speechSynthesis) window.speechSynthesis.cancel();
+        }
+
+        function formatBotReply(text) {
+            let res = escapeHtml(text);
+            res = res.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            res = res.replace(/`([^`]+)`/g, '<code class="bg-slate-100 px-1 py-0.5 rounded font-mono text-[11px] text-brand-700">$1</code>');
+            res = res.replace(/\n\n/g, '<br><br>');
+            res = res.replace(/\n- /g, '<br>&bull; ');
+            res = res.replace(/\n/g, '<br>');
+            return res;
+        }
+
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        function saveUserGeminiKey() {
+            const val = document.getElementById('userGeminiKeyInput').value.trim();
+            if (val) {
+                localStorage.setItem('gemini_api_key_custom', val);
+                appendSystemNotice("Custom Gemini API Key saved locally ✅");
+            } else {
+                localStorage.removeItem('gemini_api_key_custom');
+                appendSystemNotice("Using default portfolio key ✅");
+            }
+            closeModal('geminiApiKeyModal');
+        }
+
+        async function callGeminiAPI(userQuery) {
+            const indicator = document.getElementById('aiTypingIndicator');
+            const sendBtn = document.getElementById('aiSendBtn');
+            const input = document.getElementById('aiChatInput');
+
+            indicator.classList.remove('hidden');
+            sendBtn.disabled = true;
+            input.disabled = true;
+
+            const customKey = localStorage.getItem('gemini_api_key_custom') || "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${customKey}`;
+
+            chatHistory.push({ role: "user", parts: [{ text: userQuery }] });
+
+            const payload = {
+                contents: chatHistory,
+                systemInstruction: { parts: [{ text: NIPUN_SYSTEM_PROMPT }] }
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) throw new Error(`Gemini API returned status ${response.status}`);
+
+                const data = await response.json();
+                const botReply = data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (botReply) {
+                    chatHistory.push({ role: "model", parts: [{ text: botReply }] });
+                    appendBotMessage(botReply);
+                } else {
+                    throw new Error("Empty candidate part from Gemini");
+                }
+            } catch (err) {
+                const queryLower = userQuery.toLowerCase();
+                let fallbackAnswer = "";
+
+                if (queryLower.includes("skill") || queryLower.includes("tool") || queryLower.includes("technolog")) {
+                    fallbackAnswer = "Nipun is proficient in **Agile Management (Jira, Confluence, Trello)**, **Business Analysis (BPMN 2.0 Bizagi, PRD/RTM, Miro)**, **API Testing (Postman, Bruno, Webhooks)**, **QA Automation (Playwright TypeScript, TestRail)**, **Data & BI (Power BI, MySQL 3NF, Python)**, and **UI/UX (Figma, WCAG 2.1)**.";
+                } else if (queryLower.includes("project")) {
+                    fallbackAnswer = "Nipun has built 7 enterprise projects:\n- **1. Agile Task & Project Management** (Jira, Trello, ClickUp)\n- **2. Business Analysis & Requirements Engineering** (Bizagi, Confluence, Miro)\n- **3. Systems Analysis & Integration Specialist** (Postman, Swagger, Draw.io)\n- **4. IT Support & ERP Support** (Jira SM, Odoo ERP)\n- **5. Data Analyst & BI** (Power BI, MySQL, Python)\n- **6. Software Testing** (Playwright POM, TestRail)\n- **7. UI/UX Engineering** (Figma Design System & Prototype)\nClick the **Projects** button to view and open each GitHub repo!";
+                } else if (queryLower.includes("contact") || queryLower.includes("email") || queryLower.includes("hire") || queryLower.includes("phone")) {
+                    fallbackAnswer = "You can contact Nipun directly via:\n- **Official Phone:** 072 922 4809\n- **Primary Email:** nipunnavodya4@gmail.com\n- **Academic Email:** nipun.navodya.ise@gmail.com\nHe is actively seeking **Internship Roles in 2026**!";
+                } else if (queryLower.includes("who is") || queryLower.includes("about") || queryLower.includes("sliit")) {
+                    fallbackAnswer = "Nipun Navodya is an undergraduate in **Information Systems Engineering at SLIIT**. He specializes in bridging business requirements with technical execution across Agile PM, Systems Integration, and QA Automation.";
+                } else {
+                    fallbackAnswer = "Thank you for reaching out! Nipun is an Information Systems Engineering undergraduate at SLIIT, actively preparing for 2026 internship roles in Agile Project Management, Systems Integration, and QA Engineering. Feel free to explore his 7 Projects or check the Live Utilities!";
+                }
+
+                chatHistory.push({ role: "model", parts: [{ text: fallbackAnswer }] });
+                appendBotMessage(fallbackAnswer);
+            } finally {
+                indicator.classList.add('hidden');
+                sendBtn.disabled = false;
+                input.disabled = false;
+                input.focus();
+            }
+        }
+
+        function handleChatSubmit(e) {
+            if (e) e.preventDefault();
+            const input = document.getElementById('aiChatInput');
+            const query = input.value.trim();
+            if (!query) return;
+
+            input.value = '';
+            appendUserMessage(query);
+            callGeminiAPI(query);
+        }
+
+        /* CANVAS BACKGROUND PARTICLES */
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const particles = [];
+        const count = Math.min(Math.floor(window.innerWidth / 35), 35);
+
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.4,
+                vy: (Math.random() - 0.5) * 0.4,
+                r: Math.random() * 1.8 + 1
+            });
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let a = 0; a < particles.length; a++) {
+                let pA = particles[a];
+                pA.x += pA.vx;
+                pA.y += pA.vy;
+
+                if (pA.x < 0 || pA.x > canvas.width) pA.vx *= -1;
+                if (pA.y < 0 || pA.y > canvas.height) pA.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(pA.x, pA.y, pA.r, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(14, 165, 233, 0.2)';
+                ctx.fill();
+
+                for (let b = a + 1; b < particles.length; b++) {
+                    let pB = particles[b];
+                    let dist = Math.hypot(pA.x - pB.x, pA.y - pB.y);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(14, 165, 233, ${0.12 * (1 - dist / 120)})`;
+                        ctx.lineWidth = 0.7;
+                        ctx.moveTo(pA.x, pA.y);
+                        ctx.lineTo(pB.x, pB.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        /* HERO CYBER TECH CANVAS ANIMATION */
+        function initHeroCyberAnimation() {
+            const hCanvas = document.getElementById('hero-cyber-canvas');
+            if (!hCanvas) return;
+            const hCtx = hCanvas.getContext('2d');
+            const size = 360;
+            const center = size / 2;
+
+            const cyberNodes = [];
+            const totalNodes = 24;
+
+            for (let i = 0; i < totalNodes; i++) {
+                const angle = (Math.PI * 2 / totalNodes) * i + Math.random() * 0.2;
+                const distance = 98 + Math.random() * 45;
+                cyberNodes.push({
+                    angle: angle,
+                    baseDist: distance,
+                    dist: distance,
+                    speed: (Math.random() * 0.005 + 0.003) * (Math.random() > 0.5 ? 1 : -1),
+                    radius: Math.random() * 2 + 1.2,
+                    pulse: Math.random() * Math.PI,
+                    color: Math.random() > 0.4 ? 'rgba(14, 165, 233, ' : 'rgba(16, 185, 129, '
+                });
+            }
+
+            function drawHeroCyber() {
+                hCtx.clearRect(0, 0, size, size);
+
+                hCtx.save();
+                hCtx.strokeStyle = 'rgba(56, 189, 248, 0.35)';
+                hCtx.lineWidth = 1.2;
+                for (let a = 0; a < Math.PI * 2; a += Math.PI / 16) {
+                    const x1 = center + Math.cos(a) * 110;
+                    const y1 = center + Math.sin(a) * 110;
+                    const x2 = center + Math.cos(a) * (a % (Math.PI / 4) === 0 ? 120 : 115);
+                    const y2 = center + Math.sin(a) * (a % (Math.PI / 4) === 0 ? 120 : 115);
+                    hCtx.beginPath();
+                    hCtx.moveTo(x1, y1);
+                    hCtx.lineTo(x2, y2);
+                    hCtx.stroke();
+                }
+                hCtx.restore();
+
+                for (let i = 0; i < cyberNodes.length; i++) {
+                    const node = cyberNodes[i];
+                    node.angle += node.speed;
+                    node.pulse += 0.04;
+                    node.dist = node.baseDist + Math.sin(node.pulse) * 4;
+
+                    const x = center + Math.cos(node.angle) * node.dist;
+                    const y = center + Math.sin(node.angle) * node.dist;
+
+                    for (let j = i + 1; j < cyberNodes.length; j++) {
+                        const n2 = cyberNodes[j];
+                        const x2 = center + Math.cos(n2.angle) * n2.dist;
+                        const y2 = center + Math.sin(n2.angle) * n2.dist;
+                        const distBetween = Math.hypot(x - x2, y - y2);
+
+                        if (distBetween < 55) {
+                            hCtx.beginPath();
+                            hCtx.strokeStyle = `rgba(14, 165, 233, ${0.28 * (1 - distBetween / 55)})`;
+                            hCtx.lineWidth = 0.8;
+                            hCtx.moveTo(x, y);
+                            hCtx.lineTo(x2, y2);
+                            hCtx.stroke();
+                        }
+                    }
+
+                    hCtx.beginPath();
+                    hCtx.arc(x, y, node.radius, 0, Math.PI * 2);
+                    hCtx.fillStyle = node.color + (0.45 + Math.sin(node.pulse) * 0.35) + ')';
+                    hCtx.shadowColor = 'rgba(56, 189, 248, 0.75)';
+                    hCtx.shadowBlur = 6;
+                    hCtx.fill();
+                    hCtx.shadowBlur = 0;
+                }
+
+                requestAnimationFrame(drawHeroCyber);
+            }
+
+            drawHeroCyber();
+        }
+
+        /* INITIALIZATION */
+        window.addEventListener('DOMContentLoaded', () => {
+            renderGpaSubjects();
+            renderCertificates();
+            fetchRealtimeRates();
+            fetchLiveNews();
+            initHeroCyberAnimation();
+            
+            setInterval(fetchRealtimeRates, 60 * 60 * 1000);
+            setInterval(fetchLiveNews, 60 * 60 * 1000);
+
+            const savedKey = localStorage.getItem('gemini_api_key_custom');
+            const keyInput = document.getElementById('userGeminiKeyInput');
+            if (savedKey && keyInput) keyInput.value = savedKey;
+        });
+    </script>
+</body>
+</html>

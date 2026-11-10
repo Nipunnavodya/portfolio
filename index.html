@@ -111,7 +111,6 @@
             justify-content: center;
         }
 
-        /* Perfect Center Anchor */
         .cyber-center-element {
             position: absolute;
             top: 50%;
@@ -121,7 +120,6 @@
             pointer-events: none;
         }
 
-        /* Outer Concentric HUD Dials */
         .hud-ring-outer {
             width: 290px;
             height: 290px;
@@ -257,16 +255,13 @@
             
             <!-- Concentric Cyber HUD Frame with Perfectly Centered Photo -->
             <div class="cyber-stage-wrapper">
-                <!-- Specialized Local Cyber Circuit Canvas -->
                 <canvas id="hero-cyber-canvas" width="360" height="360"></canvas>
                 
-                <!-- Concentric Rotating HUD Rings -->
                 <div class="cyber-center-element hud-radar-sweep"></div>
                 <div class="cyber-center-element hud-bracket-frame"></div>
                 <div class="cyber-center-element hud-ring-outer"></div>
                 <div class="cyber-center-element hud-ring-mid"></div>
 
-                <!-- Subtle Telemetry Indicator Chips -->
                 <div class="absolute -left-3 top-8 hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/90 border border-sky-200/90 shadow-xs text-[10px] font-mono text-sky-700 backdrop-blur-xs select-none">
                     <span class="w-1.5 h-1.5 rounded-full bg-sky-500 animate-ping"></span>
                     <span>CORE // OK</span>
@@ -276,7 +271,6 @@
                     <span>ISE // SLIIT</span>
                 </div>
 
-                <!-- Dead-Center Profile Avatar -->
                 <div class="relative z-10 group cursor-pointer" onclick="openModal('aboutModal')">
                     <div class="absolute -inset-2 bg-gradient-to-r from-cyan-400 via-sky-500 to-indigo-500 rounded-full blur-md opacity-35 group-hover:opacity-75 transition duration-500"></div>
                     <div class="relative w-40 h-40 sm:w-44 sm:h-44 rounded-full p-1 bg-white shadow-2xl ring-4 ring-sky-100 flex items-center justify-center overflow-hidden">
@@ -286,7 +280,6 @@
                             class="w-full h-full object-cover rounded-full filter-none select-none transition duration-300 group-hover:scale-105"
                             onerror="this.onerror=null; this.src='https://placehold.co/400x400/e0f2fe/0369a1?text=Nipun+Navodya';"
                         >
-                        <!-- Active Online Status Indicator -->
                         <span class="absolute bottom-3 right-3 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full ring-4 ring-emerald-400/30 shadow-md" title="Active & Ready for Internship Roles"></span>
                     </div>
                 </div>
@@ -377,7 +370,6 @@
                         </button>
                     </div>
 
-                    <!-- Highlight Rate Card -->
                     <div class="bg-gradient-to-br from-emerald-50/80 to-teal-50/50 border border-emerald-200/80 rounded-xl p-4 text-center mb-4 shadow-xs">
                         <span class="text-[11px] font-mono font-semibold tracking-wider text-emerald-800 uppercase block">1 USD to Sri Lankan Rupee</span>
                         <div id="usd-rate-val" class="font-mono text-2xl sm:text-3xl font-extrabold text-emerald-950 my-1">
@@ -389,7 +381,6 @@
                         </div>
                     </div>
 
-                    <!-- Additional Rates -->
                     <div class="space-y-1.5 mb-4 flex-grow">
                         <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100 text-xs">
                             <span class="font-medium text-slate-700">🇪🇺 EUR / LKR</span>
@@ -405,7 +396,6 @@
                         </div>
                     </div>
 
-                    <!-- Quick USD to LKR Converter -->
                     <div class="bg-slate-50 rounded-xl p-3 border border-slate-200/80 mb-3">
                         <label class="text-[11px] font-semibold text-slate-500 uppercase block mb-1.5">Quick USD Converter</label>
                         <div class="flex items-center gap-2">
@@ -427,7 +417,6 @@
                         </div>
                     </div>
 
-                    <!-- Footer -->
                     <div class="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-100">
                         <button onclick="toggleCurrencyApiDrawer()" class="text-brand-600 hover:text-brand-700 underline flex items-center gap-1 font-medium">
                             <i class="fa-solid fa-sliders"></i> API Key Settings
@@ -435,7 +424,6 @@
                         <span>Live auto-sync</span>
                     </div>
 
-                    <!-- Currency API Drawer -->
                     <div id="currencyApiDrawer" class="hidden absolute inset-x-4 bottom-4 p-4 bg-white border border-slate-200 rounded-xl shadow-xl z-20">
                         <div class="text-xs font-bold text-slate-800 mb-1">ExchangeRate-API Key</div>
                         <p class="text-[11px] text-slate-500 mb-2">Optional: Add your custom API key for higher rate quota.</p>
@@ -464,7 +452,6 @@
                         </button>
                     </div>
 
-                    <!-- GPA Metric Summary -->
                     <div class="bg-gradient-to-br from-sky-50/80 to-blue-50/40 border border-sky-200/80 rounded-xl p-3.5 mb-3 flex items-center justify-between shadow-xs">
                         <div>
                             <span class="text-[11px] font-mono font-semibold tracking-wider text-sky-800 uppercase block">Cumulative GPA</span>
@@ -479,7 +466,6 @@
                         </div>
                     </div>
 
-                    <!-- Subject Headers -->
                     <div class="grid grid-cols-12 gap-1.5 text-[11px] font-semibold text-slate-400 uppercase px-1 mb-1.5">
                         <span class="col-span-6">Module Name</span>
                         <span class="col-span-2 text-center">Credits</span>
@@ -487,12 +473,8 @@
                         <span class="col-span-1"></span>
                     </div>
 
-                    <!-- Dynamic Modules -->
-                    <div id="gpaSubjectsList" class="space-y-1.5 mb-3 flex-grow max-h-[190px] overflow-y-auto pr-1">
-                        <!-- Populated via JavaScript -->
-                    </div>
+                    <div id="gpaSubjectsList" class="space-y-1.5 mb-3 flex-grow max-h-[190px] overflow-y-auto pr-1"></div>
 
-                    <!-- Action Buttons -->
                     <div class="flex items-center gap-2 pt-2 border-t border-slate-100 mt-auto">
                         <button onclick="addSubjectRow()" class="flex-1 py-1.5 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition flex items-center justify-center gap-1.5">
                             <i class="fa-solid fa-plus text-[10px]"></i> Add Module
@@ -520,7 +502,6 @@
                         </button>
                     </div>
 
-                    <!-- Category Filter Tabs -->
                     <div class="flex items-center gap-1.5 mb-3">
                         <button onclick="setNewsCategory('technology', this)" class="news-tab-btn active px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-900 text-white transition">
                             Tech & QA
@@ -533,12 +514,8 @@
                         </button>
                     </div>
 
-                    <!-- News Stream Items -->
-                    <div id="newsStreamList" class="space-y-2.5 flex-grow overflow-y-auto max-h-[265px] pr-1">
-                        <!-- Loaded dynamically from real-time API -->
-                    </div>
+                    <div id="newsStreamList" class="space-y-2.5 flex-grow overflow-y-auto max-h-[265px] pr-1"></div>
 
-                    <!-- News API Drawer Footer -->
                     <div class="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-100 mt-auto">
                         <button onclick="toggleNewsApiDrawer()" class="text-brand-600 hover:text-brand-700 underline flex items-center gap-1 font-medium">
                             <i class="fa-solid fa-key"></i> Custom News API
@@ -549,7 +526,6 @@
                         </span>
                     </div>
 
-                    <!-- News API Drawer -->
                     <div id="newsApiDrawer" class="hidden absolute inset-x-4 bottom-4 p-4 bg-white border border-slate-200 rounded-xl shadow-xl z-20">
                         <div class="text-xs font-bold text-slate-800 mb-1">Optional GNews / NewsData API Key</div>
                         <p class="text-[11px] text-slate-500 mb-2">Want personal GNews feeds? Enter your key here (or leave blank to use live Dev stream).</p>
@@ -583,7 +559,6 @@
          FLOATING AI BOT ASSISTANT (GEMINI POWERED WITH VOICE)
          ======================================================== -->
     <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
-        <!-- Floating Prompt Bubble -->
         <div id="aiPromptBubble" class="hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur px-3.5 py-2 rounded-2xl shadow-lg border border-sky-200 text-xs text-slate-700 cursor-pointer hover:bg-sky-50 transition" onclick="toggleAiChat()">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
             <span>Ask Nipun's <strong>AI Assistant</strong></span>
@@ -607,7 +582,6 @@
         id="aiChatWindow" 
         class="chat-closed fixed bottom-24 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-96 max-h-[580px] h-[540px] bg-white rounded-2xl shadow-2xl border border-slate-200/90 flex flex-col overflow-hidden"
     >
-        <!-- Header -->
         <div class="px-4 py-3 bg-gradient-to-r from-sky-500 via-brand-500 to-brand-600 text-white flex items-center justify-between select-none">
             <div class="flex items-center gap-2.5">
                 <div class="relative w-9 h-9 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white border border-white/30">
@@ -641,7 +615,6 @@
             </div>
         </div>
 
-        <!-- Quick Question Starters -->
         <div class="px-3 py-2 bg-slate-50/90 border-b border-slate-100 flex items-center gap-1.5 overflow-x-auto text-[11px] shrink-0 no-scrollbar">
             <button onclick="askQuickPrompt('Who is Nipun Navodya?')" class="px-2.5 py-1 bg-white hover:bg-sky-50 text-slate-700 border border-slate-200/90 rounded-full whitespace-nowrap shadow-xs transition">
                 👋 About Nipun
@@ -657,7 +630,6 @@
             </button>
         </div>
 
-        <!-- Conversation Messages -->
         <div id="aiChatMessages" class="p-3.5 space-y-3 overflow-y-auto flex-grow bg-slate-50/50 text-xs">
             <div class="flex items-start gap-2.5">
                 <div class="w-7 h-7 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs shrink-0 mt-0.5 shadow-xs">
@@ -675,7 +647,6 @@
             </div>
         </div>
 
-        <!-- Typing Indicator -->
         <div id="aiTypingIndicator" class="hidden px-4 py-1.5 bg-slate-50 text-slate-400 text-xs flex items-center gap-2 border-t border-slate-100">
             <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-bounce"></span>
             <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-bounce [animation-delay:0.15s]"></span>
@@ -683,7 +654,6 @@
             <span class="text-[11px] font-mono text-slate-500">Gemini is thinking...</span>
         </div>
 
-        <!-- Input Form -->
         <form id="aiChatForm" onsubmit="handleChatSubmit(event)" class="p-2.5 bg-white border-t border-slate-200/90 flex items-center gap-1.5 shrink-0">
             <button 
                 type="button" 
@@ -753,7 +723,7 @@
          MODALS SYSTEM: CERTIFICATES, PROJECTS, ABOUT, CONTACT
          ======================================================== -->
 
-    <!-- 1. CERTIFICATES MODAL (WITH FILE UPLOAD + LOCALSTORAGE PERSISTENCE) -->
+    <!-- 1. CERTIFICATES MODAL -->
     <div id="certificatesModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-900/40 backdrop-blur-sm" role="dialog" aria-modal="true">
         <div class="modal-box w-full max-w-4xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
             <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
@@ -771,7 +741,6 @@
                 </button>
             </div>
 
-            <!-- Upload Bar / Add Certificate Area -->
             <div class="p-6 overflow-y-auto space-y-5 flex-grow">
                 <div class="p-4 sm:p-5 rounded-2xl border-2 border-dashed border-sky-300 bg-sky-50/40 hover:bg-sky-50/80 transition flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div class="flex items-center gap-4 text-center sm:text-left">
@@ -792,7 +761,6 @@
                     </div>
                 </div>
 
-                <!-- Certificates Gallery -->
                 <div>
                     <div class="flex items-center justify-between mb-3">
                         <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400">My Certificates Gallery (<span id="certCountBadge">0</span>)</h4>
@@ -801,13 +769,10 @@
                         </button>
                     </div>
 
-                    <div id="certificatesGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        <!-- Populated dynamically and persisted in localStorage -->
-                    </div>
+                    <div id="certificatesGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
                 </div>
             </div>
 
-            <!-- Modal Footer -->
             <div class="px-6 py-3 border-t border-slate-100 bg-slate-50 flex items-center justify-between">
                 <span class="text-xs text-slate-500 flex items-center gap-1.5">
                     <i class="fa-solid fa-shield-halved text-emerald-600"></i> Persisted via Local Storage
@@ -830,17 +795,19 @@
         </div>
     </div>
 
-    <!-- 2. PROJECTS MODAL (CLEAN & TITLED "PROJECTS") -->
+    <!-- ========================================================
+         2. PROJECTS MODAL (NEW 7 MAIN PROJECTS WITH DETAILED SUB-TOPICS & DIRECT GITHUB LINKS)
+         ======================================================== -->
     <div id="projectsModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-900/40 backdrop-blur-sm" role="dialog" aria-modal="true">
-        <div class="modal-box w-full max-w-4xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
+        <div class="modal-box w-full max-w-5xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
             <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
                 <div class="flex items-center gap-3">
                     <div class="w-9 h-9 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center border border-brand-200/60">
                         <i class="fa-solid fa-folder-open text-sm"></i>
                     </div>
                     <div>
-                        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Projects</h3>
-                        <p class="text-xs text-slate-500">System implementations, testing frameworks, and business software</p>
+                        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Enterprise Internship Projects</h3>
+                        <p class="text-xs text-slate-500">7 specialized technical tracks covering modern software delivery lifecycles</p>
                     </div>
                 </div>
                 <button onclick="closeModal('projectsModal')" class="w-8 h-8 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-200/60 flex items-center justify-center transition">
@@ -848,118 +815,311 @@
                 </button>
             </div>
 
-            <!-- Categories -->
+            <!-- Categories Filter -->
             <div class="px-6 pt-3 pb-2 flex items-center gap-2 border-b border-slate-100 overflow-x-auto text-xs font-medium">
                 <button onclick="filterProjects('all', this)" class="proj-tab-btn active px-3 py-1 rounded-full bg-slate-900 text-white font-semibold transition">
-                    All Projects
+                    All 7 Projects
                 </button>
-                <button onclick="filterProjects('fullstack', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
-                    Full Stack & Enterprise
+                <button onclick="filterProjects('pm', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
+                    Agile & BA
                 </button>
-                <button onclick="filterProjects('qa', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
-                    QA & Automation
+                <button onclick="filterProjects('architecture', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
+                    Systems & Integration
+                </button>
+                <button onclick="filterProjects('support', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
+                    ITSM & ERP
                 </button>
                 <button onclick="filterProjects('analytics', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
-                    BI & Systems Analysis
+                    Data & BI
+                </button>
+                <button onclick="filterProjects('qa', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
+                    QA Automation
+                </button>
+                <button onclick="filterProjects('uiux', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
+                    UI/UX Design
                 </button>
             </div>
 
-            <!-- Projects Grid -->
+            <!-- Projects Grid: 7 Core Projects -->
             <div class="p-6 overflow-y-auto space-y-4">
                 <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-                    <!-- Project 1 -->
-                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="fullstack">
+                    <!-- PROJECT 1 -->
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="pm">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-brand-50 text-brand-700 rounded border border-brand-200">SLIIT ISE Project</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-blue-50 text-blue-700 rounded border border-blue-200">Track 01 • Project Management</span>
                                 <span class="text-xs text-slate-400 font-mono">2026</span>
                             </div>
-                            <h4 class="font-bold text-slate-900 text-sm mb-1">InsightLanka Pharmacy Management System</h4>
-                            <p class="text-xs text-slate-600 mb-3 leading-relaxed">
-                                Enterprise pharmacy stock inventory, automated drug batch expiry warnings, sales POS invoicing, and role-based staff authentication.
+                            <h4 class="font-bold text-slate-900 text-sm mb-1.5">1. Agile Task & Project Management (Trello, Jira, ClickUp)</h4>
+                            <p class="text-xs text-slate-600 mb-2.5 leading-relaxed">
+                                End-to-end Agile execution lifecycle including continuous Kanban delivery, Scrum sprint metrics, and project scheduling.
                             </p>
+                            
+                            <!-- Subtopics in Detail -->
+                            <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px] space-y-1.5">
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Agile Kanban Board (Trello):</strong> E-commerce workflow with Backlog, To Do, In Progress, QA Testing, Done & automated Butler rules.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Scrum Sprint & Burndown Metrics (Jira):</strong> Backlog grooming, User Stories, Fibonacci Story Points, and burndown velocity tracking.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Interactive Timeline (ClickUp / Gantt):</strong> Work Breakdown Structure (WBS), Critical Path analysis, and dependency baselines.
+                                </div>
+                            </div>
+
                             <div class="flex flex-wrap gap-1 mb-3">
-                                <span class="px-2 py-0.5 text-[11px] font-mono bg-white text-slate-700 border border-slate-200 rounded">React</span>
-                                <span class="px-2 py-0.5 text-[11px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Node.js</span>
-                                <span class="px-2 py-0.5 text-[11px] font-mono bg-white text-slate-700 border border-slate-200 rounded">MySQL</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Jira Software</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Trello</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">ClickUp</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Scrum / Kanban</span>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
-                            <a href="https://github.com/Nipunnavodya" target="_blank" class="px-3 py-1 text-xs font-semibold bg-slate-900 text-white rounded-lg hover:bg-brand-600 transition flex items-center gap-1.5">
-                                <i class="fa-brands fa-github"></i> Repository
+                        <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
+                            <span class="text-[11px] font-mono text-slate-500">Agile-Task-and-Project-Management</span>
+                            <a href="https://github.com/Nipunnavodya/Agile-Task-and-Project-Management" target="_blank" rel="noopener noreferrer" class="px-3 py-1 text-xs font-semibold bg-slate-900 text-white rounded-lg hover:bg-brand-600 transition flex items-center gap-1.5">
+                                <i class="fa-brands fa-github"></i> Open Repository
                             </a>
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
-                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="fullstack">
+                    <!-- PROJECT 2 -->
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="pm">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-purple-50 text-purple-700 rounded border border-purple-200">ERP & Logistics</span>
-                                <span class="text-xs text-slate-400 font-mono">2025</span>
-                            </div>
-                            <h4 class="font-bold text-slate-900 text-sm mb-1">NexusParts Automotive ERP Portal</h4>
-                            <p class="text-xs text-slate-600 mb-3 leading-relaxed">
-                                Multi-warehouse auto spare parts distribution portal with real-time stock transfer requests, supplier purchase order tracking, and dynamic ledger reports.
-                            </p>
-                            <div class="flex flex-wrap gap-1 mb-3">
-                                <span class="px-2 py-0.5 text-[11px] font-mono bg-white text-slate-700 border border-slate-200 rounded">PHP/Laravel</span>
-                                <span class="px-2 py-0.5 text-[11px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Bootstrap</span>
-                                <span class="px-2 py-0.5 text-[11px] font-mono bg-white text-slate-700 border border-slate-200 rounded">PostgreSQL</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
-                            <a href="https://github.com/Nipunnavodya" target="_blank" class="px-3 py-1 text-xs font-semibold bg-slate-900 text-white rounded-lg hover:bg-brand-600 transition flex items-center gap-1.5">
-                                <i class="fa-brands fa-github"></i> Repository
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="qa">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-rose-50 text-rose-700 rounded border border-rose-200">QA Automation</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-amber-50 text-amber-700 rounded border border-amber-200">Track 02 • Requirements Engineering</span>
                                 <span class="text-xs text-slate-400 font-mono">2026</span>
                             </div>
-                            <h4 class="font-bold text-slate-900 text-sm mb-1">Playwright & Newman CI/CD Test Pipeline</h4>
-                            <p class="text-xs text-slate-600 mb-3 leading-relaxed">
-                                Automated end-to-end checkout and authentication test suite built with Page Object Model (POM), combined with automated API regression runs via GitHub Actions.
+                            <h4 class="font-bold text-slate-900 text-sm mb-1.5">2. Business Analysis & Requirements Engineering</h4>
+                            <p class="text-xs text-slate-600 mb-2.5 leading-relaxed">
+                                Standardized business process modeling, requirement traceability matrices, and visual backlog prioritization frameworks.
                             </p>
+                            
+                            <!-- Subtopics in Detail -->
+                            <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px] space-y-1.5">
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• BPMN 2.0 Flowchart (Bizagi):</strong> E-commerce Checkout, payment authorization, and exception refund swimlane workflows.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• PRD & RTM (Confluence + Jira):</strong> Banking Application PRD with 15+ User Stories mapped into a bidirectional Traceability Matrix.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• User Story Mapping (Miro):</strong> MoSCoW prioritization decomposing features into Release 1 (MVP), Release 2, and Release 3.
+                                </div>
+                            </div>
+
                             <div class="flex flex-wrap gap-1 mb-3">
-                                <span class="px-2 py-0.5 text-[11px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Playwright</span>
-                                <span class="px-2 py-0.5 text-[11px] font-mono bg-white text-slate-700 border border-slate-200 rounded">TypeScript</span>
-                                <span class="px-2 py-0.5 text-[11px] font-mono bg-white text-slate-700 border border-slate-200 rounded">GitHub Actions</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Bizagi Modeler</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Confluence</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Miro</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">MoSCoW</span>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
-                            <a href="https://github.com/Nipunnavodya" target="_blank" class="px-3 py-1 text-xs font-semibold bg-slate-900 text-white rounded-lg hover:bg-brand-600 transition flex items-center gap-1.5">
-                                <i class="fa-brands fa-github"></i> View Test Suite
+                        <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
+                            <span class="text-[11px] font-mono text-slate-500">Business-Analysis-and-Requirements-Engineering</span>
+                            <a href="https://github.com/Nipunnavodya/Business-Analysis-and-Requirements-Engineering" target="_blank" rel="noopener noreferrer" class="px-3 py-1 text-xs font-semibold bg-slate-900 text-white rounded-lg hover:bg-brand-600 transition flex items-center gap-1.5">
+                                <i class="fa-brands fa-github"></i> Open Repository
                             </a>
                         </div>
                     </div>
 
-                    <!-- Project 4 -->
+                    <!-- PROJECT 3 -->
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="architecture">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-orange-50 text-orange-700 rounded border border-orange-200">Track 03 • Systems Architecture</span>
+                                <span class="text-xs text-slate-400 font-mono">2026</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-sm mb-1.5">3. Systems Analysis & Integration Specialist</h4>
+                            <p class="text-xs text-slate-600 mb-2.5 leading-relaxed">
+                                Formalized API contracts, distributed microservice architectural diagrams, and real-time webhook sync pipelines.
+                            </p>
+                            
+                            <!-- Subtopics in Detail -->
+                            <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px] space-y-1.5">
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• API Blueprint & Docs (Postman / Swagger):</strong> OpenAPI 3.0 Payment Gateway integration specs with UML Sequence Diagrams.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Architecture Diagrams (Draw.io):</strong> Multi-tier Microservices topology, Domain Class diagrams, and DFD Level 0, 1 & 2.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Webhooks Integration Suite (Bruno):</strong> Real-time cross-platform sync, HMAC signature checks, and idempotent event pipelines.
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Postman</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">OpenAPI 3.0</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Draw.io</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Bruno</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
+                            <span class="text-[11px] font-mono text-slate-500">Systems-Analysis-and-Integration-Specialist</span>
+                            <a href="https://github.com/Nipunnavodya/Systems-Analysis-and-Integration-Specialist" target="_blank" rel="noopener noreferrer" class="px-3 py-1 text-xs font-semibold bg-slate-900 text-white rounded-lg hover:bg-brand-600 transition flex items-center gap-1.5">
+                                <i class="fa-brands fa-github"></i> Open Repository
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 4 -->
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="support">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-purple-50 text-purple-700 rounded border border-purple-200">Track 04 • IT Service Management & ERP</span>
+                                <span class="text-xs text-slate-400 font-mono">2026</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-sm mb-1.5">4. IT Support, Application Support & ERP Support</h4>
+                            <p class="text-xs text-slate-600 mb-2.5 leading-relaxed">
+                                ITIL-aligned service desk setups, complete open-source ERP implementation, and production error log triage.
+                            </p>
+                            
+                            <!-- Subtopics in Detail -->
+                            <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px] space-y-1.5">
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• ITSM Service Desk (Jira SM):</strong> Customer support portal, customized incident lifecycles, and multi-tier SLA rules.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Open-Source ERP (Odoo):</strong> Inventory warehouse configuration, automated reordering rules, Sales Orders, and Invoicing.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Log Monitoring & Debugging (Postman + ELK):</strong> Production HTTP 4xx/5xx error tracing and Root Cause Analysis (RCA) reporting.
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Jira Service Mgmt</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Odoo ERP</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">ITIL v4</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Log RCA</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
+                            <span class="text-[11px] font-mono text-slate-500">IT-Support-Application-Support-and-ERP-Support</span>
+                            <a href="https://github.com/Nipunnavodya/IT-Support-Application-Support-and-ERP-Support" target="_blank" rel="noopener noreferrer" class="px-3 py-1 text-xs font-semibold bg-slate-900 text-white rounded-lg hover:bg-brand-600 transition flex items-center gap-1.5">
+                                <i class="fa-brands fa-github"></i> Open Repository
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 5 -->
                     <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="analytics">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-amber-50 text-amber-700 rounded border border-amber-200">BI & Analytics</span>
-                                <span class="text-xs text-slate-400 font-mono">2025</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-yellow-50 text-yellow-700 rounded border border-yellow-200">Track 05 • Data Analytics & DBA</span>
+                                <span class="text-xs text-slate-400 font-mono">2026</span>
                             </div>
-                            <h4 class="font-bold text-slate-900 text-sm mb-1">Retail Churn & Revenue Analytics Dashboard</h4>
-                            <p class="text-xs text-slate-600 mb-3 leading-relaxed">
-                                Formulated 3NF relational data warehouse with automated Python ETL routines, interactive Power BI KPI dashboards, and customer lifetime value (CLV) forecasts.
+                            <h4 class="font-bold text-slate-900 text-sm mb-1.5">5. Data Analyst, DBA & Business Intelligence</h4>
+                            <p class="text-xs text-slate-600 mb-2.5 leading-relaxed">
+                                Executive BI reporting dashboards, third normal form relational database modeling, and predictive customer retention analysis.
                             </p>
+                            
+                            <!-- Subtopics in Detail -->
+                            <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px] space-y-1.5">
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Executive BI Dashboard (Power BI):</strong> Interactive KPI dashboards tracking Revenue velocity, Churn %, and YoY cohort growth.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• 3NF Database Schema (DBeaver / MySQL):</strong> Normalized ERD models, DDL constraints, indexing, and complex analytical SQL joins.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Customer Churn Analytics (Python):</strong> Exploratory Data Analysis (EDA) in Jupyter Notebook using Pandas, Seaborn, and Matplotlib.
+                                </div>
+                            </div>
+
                             <div class="flex flex-wrap gap-1 mb-3">
-                                <span class="px-2 py-0.5 text-[11px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Power BI</span>
-                                <span class="px-2 py-0.5 text-[11px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Python Pandas</span>
-                                <span class="px-2 py-0.5 text-[11px] font-mono bg-white text-slate-700 border border-slate-200 rounded">SQL Server</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Power BI</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">MySQL / 3NF</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">DBeaver</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Python EDA</span>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
-                            <a href="https://github.com/Nipunnavodya" target="_blank" class="px-3 py-1 text-xs font-semibold bg-slate-900 text-white rounded-lg hover:bg-brand-600 transition flex items-center gap-1.5">
-                                <i class="fa-brands fa-github"></i> View Dashboard
+                        <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
+                            <span class="text-[11px] font-mono text-slate-500">Data-Analyst-DBA-and-Business-Intelligence</span>
+                            <a href="https://github.com/Nipunnavodya/Data-Analyst-DBA-and-Business-Intelligence" target="_blank" rel="noopener noreferrer" class="px-3 py-1 text-xs font-semibold bg-slate-900 text-white rounded-lg hover:bg-brand-600 transition flex items-center gap-1.5">
+                                <i class="fa-brands fa-github"></i> Open Repository
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 6 -->
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="qa">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-emerald-50 text-emerald-700 rounded border border-emerald-200">Track 06 • QA & Test Automation</span>
+                                <span class="text-xs text-slate-400 font-mono">2026</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-sm mb-1.5">6. Software Testing (Manual & Automation)</h4>
+                            <p class="text-xs text-slate-600 mb-2.5 leading-relaxed">
+                                Complete QA lifecycle covering 50+ enterprise test scenarios, defect life-cycle tracking in Jira, and browser-driven POM automation.
+                            </p>
+                            
+                            <!-- Subtopics in Detail -->
+                            <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px] space-y-1.5">
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Manual Test Case Suite (TestRail):</strong> 50+ positive/negative, boundary value, and regression test cases for web applications.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Defect Lifecycle Management (Jira):</strong> Detailed bug reports with steps to reproduce, severity/priority matrices, and trace logs.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Web UI Automation (Playwright):</strong> End-to-end e-commerce checkout automation framework built with Page Object Model (POM).
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Playwright</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">TypeScript</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">TestRail</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Jira Bug Tracker</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
+                            <span class="text-[11px] font-mono text-slate-500">Software-Testing-Manual-and-Automation</span>
+                            <a href="https://github.com/Nipunnavodya/Software-Testing-Manual-and-Automation" target="_blank" rel="noopener noreferrer" class="px-3 py-1 text-xs font-semibold bg-slate-900 text-white rounded-lg hover:bg-brand-600 transition flex items-center gap-1.5">
+                                <i class="fa-brands fa-github"></i> Open Repository
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 7 -->
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between md:col-span-2" data-category="uiux">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-rose-50 text-rose-700 rounded border border-rose-200">Track 07 • UI/UX & Digital Experience</span>
+                                <span class="text-xs text-slate-400 font-mono">2026</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-sm mb-1.5">7. UI/UX Engineering & Design</h4>
+                            <p class="text-xs text-slate-600 mb-2.5 leading-relaxed">
+                                Scalable atomic design system architectures, clickable mobile app user journeys, and WCAG accessibility compliance evaluations.
+                            </p>
+                            
+                            <!-- Subtopics in Detail -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-2 bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px]">
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Component Design System (Figma):</strong> Reusable design tokens, buttons, colors, typography scales, and auto-layout UI states.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Interactive Prototype (Figma):</strong> Clickable high-fidelity mobile food/product ordering experience with micro-interactions.
+                                </div>
+                                <div class="text-slate-700">
+                                    <strong class="text-slate-900 font-semibold">• Accessibility Audit (AXE DevTools):</strong> WCAG 2.1 Level AA evaluation, contrast ratios, and frontend remediation scorecards.
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Figma</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Design Systems</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">AXE DevTools</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">WCAG 2.1 AA</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
+                            <span class="text-[11px] font-mono text-slate-500">UI-UX-Engineering-and-Design</span>
+                            <a href="https://github.com/Nipunnavodya/UI-UX-Engineering-and-Design" target="_blank" rel="noopener noreferrer" class="px-3 py-1 text-xs font-semibold bg-slate-900 text-white rounded-lg hover:bg-brand-600 transition flex items-center gap-1.5">
+                                <i class="fa-brands fa-github"></i> Open Repository
                             </a>
                         </div>
                     </div>
@@ -969,8 +1129,8 @@
 
             <!-- Modal Footer -->
             <div class="px-6 py-3 border-t border-slate-100 bg-slate-50 flex items-center justify-between">
-                <a href="https://github.com/Nipunnavodya" target="_blank" class="text-xs font-semibold text-brand-600 hover:underline flex items-center gap-1">
-                    <i class="fa-brands fa-github"></i> More on GitHub Profile &rarr;
+                <a href="https://github.com/Nipunnavodya" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-600 hover:underline flex items-center gap-1">
+                    <i class="fa-brands fa-github"></i> Visit Nipun's Full GitHub Profile &rarr;
                 </a>
                 <button onclick="closeModal('projectsModal')" class="px-4 py-1.5 text-xs font-semibold bg-slate-800 hover:bg-slate-900 text-white rounded-lg transition">
                     Close Window
@@ -1690,7 +1850,7 @@
         }
 
         /* ========================================================
-           4. FLOATING AI ASSISTANT (GEMINI + VOICE + CONTEXT)
+           4. FLOATING AI ASSISTANT (GEMINI + VOICE + CONTEXT UPDATED)
            ======================================================== */
         let isChatOpen = false;
         let isVoiceEnabled = true;
@@ -1701,20 +1861,16 @@
 You are the personal AI Assistant for Nipun Navodya, hosted on his professional portfolio website.
 Here is authentic verified background information about Nipun:
 - Name: Nipun Navodya
-- Education: Undergraduate Student in Information Systems Engineering (ISE) at SLIIT (Sri Lanka Institute of Information Technology), Faculty of Computing.
+- Education: Undergraduate Student in Information Systems Engineering (ISE) at SLIIT (Faculty of Computing).
 - Target Roles: Agile Project Manager / Scrum Master, Business Analyst (BA), Systems Analyst & Integration Specialist, IT & ERP Support Engineer (Odoo), Software QA Automation Engineer.
-- Core Skills & Tooling:
-  * Project & Agile Management: Jira, Confluence, Trello, ClickUp, Gantt charts, Sprint Backlogs, Story points.
-  * Business Analysis: BPMN 2.0 (Bizagi Modeler), PRD & RTM documentation, Miro user story mapping.
-  * Systems & APIs: Postman, Swagger/OpenAPI, Webhooks, Bruno, DFD & Architecture diagrams (Draw.io).
-  * Software Engineering & DB: React, Node.js, PHP/Laravel, MySQL (3NF), PostgreSQL, Python (Pandas/EDA).
-  * Quality Assurance: Playwright (TS/JS), Cypress, TestRail, JMeter load testing, GitHub Actions CI/CD.
-  * UI/UX: Figma design systems, interactive mobile prototyping.
-- Featured Projects:
-  1. InsightLanka Pharmacy Management System (React, Node.js, MySQL)
-  2. NexusParts Automotive ERP Portal (Laravel, PostgreSQL)
-  3. Playwright & Newman CI/CD Test Pipeline (TypeScript, GitHub Actions)
-  4. Retail Churn & Revenue Analytics Dashboard (Power BI, Python).
+- Featured 7 Technical Projects & Direct GitHub Repositories:
+  1. Agile Task & Project Management (Trello, Jira, ClickUp) -> https://github.com/Nipunnavodya/Agile-Task-and-Project-Management
+  2. Business Analysis & Requirements Engineering (Bizagi, Confluence, Miro) -> https://github.com/Nipunnavodya/Business-Analysis-and-Requirements-Engineering
+  3. Systems Analysis & Integration Specialist (Postman, Swagger, Draw.io, Bruno) -> https://github.com/Nipunnavodya/Systems-Analysis-and-Integration-Specialist
+  4. IT Support, Application Support & ERP Support (Jira SM, Odoo ERP, Log Debugging) -> https://github.com/Nipunnavodya/IT-Support-Application-Support-and-ERP-Support
+  5. Data Analyst, DBA & Business Intelligence (Power BI, MySQL 3NF, Python Pandas) -> https://github.com/Nipunnavodya/Data-Analyst-DBA-and-Business-Intelligence
+  6. Software Testing (Manual & Automation) (Playwright TypeScript, TestRail, Jira) -> https://github.com/Nipunnavodya/Software-Testing-Manual-and-Automation
+  7. UI/UX Engineering & Design (Figma Design Systems, Clickable Mobile Prototype, WCAG 2.1) -> https://github.com/Nipunnavodya/UI-UX-Engineering-and-Design
 - Contact Info:
   * Primary Email: nipunnavodya4@gmail.com
   * Academic Email: nipun.navodya.ise@gmail.com
@@ -1758,408 +1914,4 @@ Here is authentic verified background information about Nipun:
             }
         }
 
-        function speakText(text) {
-            if (!isVoiceEnabled || !('speechSynthesis' in window)) return;
-            window.speechSynthesis.cancel();
-
-            const clean = text.replace(/[*_#`]/g, '').replace(/https?:\/\/\S+/g, '');
-            const utterance = new SpeechSynthesisUtterance(clean);
-            utterance.rate = 1.05;
-            utterance.pitch = 1.0;
-            
-            const voices = window.speechSynthesis.getVoices();
-            const englishVoice = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha')));
-            if (englishVoice) utterance.voice = englishVoice;
-
-            window.speechSynthesis.speak(utterance);
-        }
-
-        function toggleSpeechRecognition() {
-            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-            if (!SpeechRecognition) return;
-
-            const micIcon = document.getElementById('micIcon');
-            const micBtn = document.getElementById('micBtn');
-
-            if (isSpeechRecognitionActive) {
-                if (speechRecognitionInstance) speechRecognitionInstance.stop();
-                isSpeechRecognitionActive = false;
-                micIcon.className = "fa-solid fa-microphone text-sm";
-                micBtn.classList.remove('text-red-500', 'bg-red-50');
-                return;
-            }
-
-            speechRecognitionInstance = new SpeechRecognition();
-            speechRecognitionInstance.continuous = false;
-            speechRecognitionInstance.interimResults = false;
-            speechRecognitionInstance.lang = 'en-US';
-
-            speechRecognitionInstance.onstart = () => {
-                isSpeechRecognitionActive = true;
-                micIcon.className = "fa-solid fa-microphone-lines text-sm animate-pulse";
-                micBtn.classList.add('text-red-500', 'bg-red-50');
-            };
-
-            speechRecognitionInstance.onresult = (event) => {
-                const transcript = event.results[0][0].transcript;
-                const input = document.getElementById('aiChatInput');
-                if (input) {
-                    input.value = transcript;
-                    handleChatSubmit();
-                }
-            };
-
-            speechRecognitionInstance.onerror = () => {
-                isSpeechRecognitionActive = false;
-                micIcon.className = "fa-solid fa-microphone text-sm";
-                micBtn.classList.remove('text-red-500', 'bg-red-50');
-            };
-
-            speechRecognitionInstance.onend = () => {
-                isSpeechRecognitionActive = false;
-                micIcon.className = "fa-solid fa-microphone text-sm";
-                micBtn.classList.remove('text-red-500', 'bg-red-50');
-            };
-
-            speechRecognitionInstance.start();
-        }
-
-        function askQuickPrompt(question) {
-            const input = document.getElementById('aiChatInput');
-            if (input) {
-                input.value = question;
-                handleChatSubmit();
-            }
-        }
-
-        function appendUserMessage(text) {
-            const container = document.getElementById('aiChatMessages');
-            const row = document.createElement('div');
-            row.className = "flex items-start justify-end gap-2";
-            row.innerHTML = `
-                <div class="chat-bubble-user p-2.5 px-3 rounded-2xl max-w-[82%] text-xs leading-relaxed shadow-xs font-medium">
-                    ${escapeHtml(text)}
-                </div>
-            `;
-            container.appendChild(row);
-            container.scrollTop = container.scrollHeight;
-        }
-
-        function appendBotMessage(text) {
-            const container = document.getElementById('aiChatMessages');
-            const row = document.createElement('div');
-            row.className = "flex items-start gap-2.5";
-            const formatted = formatBotReply(text);
-
-            row.innerHTML = `
-                <div class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-[11px] shrink-0 mt-0.5 shadow-xs">
-                    <i class="fa-solid fa-robot"></i>
-                </div>
-                <div class="chat-bubble-bot p-2.5 px-3 rounded-2xl max-w-[85%] text-xs leading-relaxed shadow-xs space-y-1 text-slate-700">
-                    ${formatted}
-                </div>
-            `;
-            container.appendChild(row);
-            container.scrollTop = container.scrollHeight;
-
-            speakText(text);
-        }
-
-        function appendSystemNotice(text) {
-            const container = document.getElementById('aiChatMessages');
-            const div = document.createElement('div');
-            div.className = "text-center text-[10px] text-slate-400 font-mono py-1";
-            div.textContent = text;
-            container.appendChild(div);
-            container.scrollTop = container.scrollHeight;
-        }
-
-        function clearChatHistory() {
-            chatHistory = [];
-            const container = document.getElementById('aiChatMessages');
-            container.innerHTML = `
-                <div class="flex items-start gap-2.5">
-                    <div class="w-7 h-7 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs shrink-0 mt-0.5 shadow-xs">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <div class="chat-bubble-bot p-3 rounded-2xl max-w-[85%] shadow-xs text-xs leading-relaxed space-y-1.5">
-                        <p class="font-medium text-slate-800">
-                            Chat history refreshed! 🧹
-                        </p>
-                        <p class="text-slate-600">
-                            How can I assist you with Nipun's portfolio today?
-                        </p>
-                    </div>
-                </div>
-            `;
-            if (window.speechSynthesis) window.speechSynthesis.cancel();
-        }
-
-        function formatBotReply(text) {
-            let res = escapeHtml(text);
-            res = res.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-            res = res.replace(/`([^`]+)`/g, '<code class="bg-slate-100 px-1 py-0.5 rounded font-mono text-[11px] text-brand-700">$1</code>');
-            res = res.replace(/\n\n/g, '<br><br>');
-            res = res.replace(/\n- /g, '<br>&bull; ');
-            res = res.replace(/\n/g, '<br>');
-            return res;
-        }
-
-        function escapeHtml(str) {
-            const div = document.createElement('div');
-            div.textContent = str;
-            return div.innerHTML;
-        }
-
-        function saveUserGeminiKey() {
-            const val = document.getElementById('userGeminiKeyInput').value.trim();
-            if (val) {
-                localStorage.setItem('gemini_api_key_custom', val);
-                appendSystemNotice("Custom Gemini API Key saved locally ✅");
-            } else {
-                localStorage.removeItem('gemini_api_key_custom');
-                appendSystemNotice("Using default portfolio key ✅");
-            }
-            closeModal('geminiApiKeyModal');
-        }
-
-        async function callGeminiAPI(userQuery) {
-            const indicator = document.getElementById('aiTypingIndicator');
-            const sendBtn = document.getElementById('aiSendBtn');
-            const input = document.getElementById('aiChatInput');
-
-            indicator.classList.remove('hidden');
-            sendBtn.disabled = true;
-            input.disabled = true;
-
-            const customKey = localStorage.getItem('gemini_api_key_custom') || "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${customKey}`;
-
-            chatHistory.push({ role: "user", parts: [{ text: userQuery }] });
-
-            const payload = {
-                contents: chatHistory,
-                systemInstruction: { parts: [{ text: NIPUN_SYSTEM_PROMPT }] }
-            };
-
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                if (!response.ok) throw new Error(`Gemini API returned status ${response.status}`);
-
-                const data = await response.json();
-                const botReply = data.candidates?.[0]?.content?.parts?.[0]?.text;
-
-                if (botReply) {
-                    chatHistory.push({ role: "model", parts: [{ text: botReply }] });
-                    appendBotMessage(botReply);
-                } else {
-                    throw new Error("Empty candidate part from Gemini");
-                }
-            } catch (err) {
-                const queryLower = userQuery.toLowerCase();
-                let fallbackAnswer = "";
-
-                if (queryLower.includes("skill") || queryLower.includes("tool") || queryLower.includes("technolog")) {
-                    fallbackAnswer = "Nipun is proficient in **Agile Management (Jira, Confluence)**, **Business Analysis (BPMN 2.0 Bizagi, PRD/RTM)**, **API Testing (Postman, Bruno, Webhooks)**, **Full-stack Dev (React, Node.js, Laravel, MySQL/PostgreSQL)**, and **QA Automation (Playwright, Cypress, JMeter)**.";
-                } else if (queryLower.includes("project")) {
-                    fallbackAnswer = "Nipun's top featured projects include:\n- **InsightLanka Pharmacy ERP** (React, Node.js, MySQL)\n- **NexusParts Automotive Distribution** (Laravel, PostgreSQL)\n- **Playwright Automated CI/CD Regression Suite** (TypeScript, GitHub Actions)\n- **Retail Churn & Revenue Analytics** (Power BI, Python). You can view full details in the **Projects** modal!";
-                } else if (queryLower.includes("contact") || queryLower.includes("email") || queryLower.includes("hire") || queryLower.includes("phone")) {
-                    fallbackAnswer = "You can contact Nipun directly via:\n- **Official Phone:** 072 922 4809\n- **Primary Email:** nipunnavodya4@gmail.com\n- **Academic Email:** nipun.navodya.ise@gmail.com\nHe is actively seeking **Internship Roles in 2026**!";
-                } else if (queryLower.includes("who is") || queryLower.includes("about") || queryLower.includes("sliit")) {
-                    fallbackAnswer = "Nipun Navodya is an undergraduate in **Information Systems Engineering at SLIIT**. He specializes in bridging business requirements with technical execution across Agile PM, Systems Integration, and QA Automation.";
-                } else {
-                    fallbackAnswer = "Thank you for reaching out! Nipun is an Information Systems Engineering undergraduate at SLIIT, actively preparing for 2026 internship roles in Agile Project Management, Systems Integration, and QA Engineering. Feel free to explore the interactive toolkit or check his Projects!";
-                }
-
-                chatHistory.push({ role: "model", parts: [{ text: fallbackAnswer }] });
-                appendBotMessage(fallbackAnswer);
-            } finally {
-                indicator.classList.add('hidden');
-                sendBtn.disabled = false;
-                input.disabled = false;
-                input.focus();
-            }
-        }
-
-        function handleChatSubmit(e) {
-            if (e) e.preventDefault();
-            const input = document.getElementById('aiChatInput');
-            const query = input.value.trim();
-            if (!query) return;
-
-            input.value = '';
-            appendUserMessage(query);
-            callGeminiAPI(query);
-        }
-
-        /* ========================================================
-           GLOBAL LIGHT BACKGROUND PARTICLES
-           ======================================================== */
-        const canvas = document.getElementById('particle-canvas');
-        const ctx = canvas.getContext('2d');
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-
-        const particles = [];
-        const count = Math.min(Math.floor(window.innerWidth / 35), 35);
-
-        for (let i = 0; i < count; i++) {
-            particles.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                vx: (Math.random() - 0.5) * 0.4,
-                vy: (Math.random() - 0.5) * 0.4,
-                r: Math.random() * 1.8 + 1
-            });
-        }
-
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (let a = 0; a < particles.length; a++) {
-                let pA = particles[a];
-                pA.x += pA.vx;
-                pA.y += pA.vy;
-
-                if (pA.x < 0 || pA.x > canvas.width) pA.vx *= -1;
-                if (pA.y < 0 || pA.y > canvas.height) pA.vy *= -1;
-
-                ctx.beginPath();
-                ctx.arc(pA.x, pA.y, pA.r, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(14, 165, 233, 0.2)';
-                ctx.fill();
-
-                for (let b = a + 1; b < particles.length; b++) {
-                    let pB = particles[b];
-                    let dist = Math.hypot(pA.x - pB.x, pA.y - pB.y);
-                    if (dist < 120) {
-                        ctx.beginPath();
-                        ctx.strokeStyle = `rgba(14, 165, 233, ${0.12 * (1 - dist / 120)})`;
-                        ctx.lineWidth = 0.7;
-                        ctx.moveTo(pA.x, pA.y);
-                        ctx.lineTo(pB.x, pB.y);
-                        ctx.stroke();
-                    }
-                }
-            }
-            requestAnimationFrame(animateParticles);
-        }
-        animateParticles();
-
-        /* ========================================================
-           HERO SPECIALIZED CYBER TECH CANVAS ANIMATION (CONCENTRIC)
-           ======================================================== */
-        function initHeroCyberAnimation() {
-            const hCanvas = document.getElementById('hero-cyber-canvas');
-            if (!hCanvas) return;
-            const hCtx = hCanvas.getContext('2d');
-            const size = 360;
-            const center = size / 2;
-
-            const cyberNodes = [];
-            const totalNodes = 24;
-
-            for (let i = 0; i < totalNodes; i++) {
-                const angle = (Math.PI * 2 / totalNodes) * i + Math.random() * 0.2;
-                const distance = 98 + Math.random() * 45;
-                cyberNodes.push({
-                    angle: angle,
-                    baseDist: distance,
-                    dist: distance,
-                    speed: (Math.random() * 0.005 + 0.003) * (Math.random() > 0.5 ? 1 : -1),
-                    radius: Math.random() * 2 + 1.2,
-                    pulse: Math.random() * Math.PI,
-                    color: Math.random() > 0.4 ? 'rgba(14, 165, 233, ' : 'rgba(16, 185, 129, '
-                });
-            }
-
-            function drawHeroCyber() {
-                hCtx.clearRect(0, 0, size, size);
-
-                // 1. Ticks on the Tech Dial
-                hCtx.save();
-                hCtx.strokeStyle = 'rgba(56, 189, 248, 0.35)';
-                hCtx.lineWidth = 1.2;
-                for (let a = 0; a < Math.PI * 2; a += Math.PI / 16) {
-                    const x1 = center + Math.cos(a) * 110;
-                    const y1 = center + Math.sin(a) * 110;
-                    const x2 = center + Math.cos(a) * (a % (Math.PI / 4) === 0 ? 120 : 115);
-                    const y2 = center + Math.sin(a) * (a % (Math.PI / 4) === 0 ? 120 : 115);
-                    hCtx.beginPath();
-                    hCtx.moveTo(x1, y1);
-                    hCtx.lineTo(x2, y2);
-                    hCtx.stroke();
-                }
-                hCtx.restore();
-
-                // 2. Cyber Nodes & Circuit Traces
-                for (let i = 0; i < cyberNodes.length; i++) {
-                    const node = cyberNodes[i];
-                    node.angle += node.speed;
-                    node.pulse += 0.04;
-                    node.dist = node.baseDist + Math.sin(node.pulse) * 4;
-
-                    const x = center + Math.cos(node.angle) * node.dist;
-                    const y = center + Math.sin(node.angle) * node.dist;
-
-                    // Interconnected circuit traces
-                    for (let j = i + 1; j < cyberNodes.length; j++) {
-                        const n2 = cyberNodes[j];
-                        const x2 = center + Math.cos(n2.angle) * n2.dist;
-                        const y2 = center + Math.sin(n2.angle) * n2.dist;
-                        const distBetween = Math.hypot(x - x2, y - y2);
-
-                        if (distBetween < 55) {
-                            hCtx.beginPath();
-                            hCtx.strokeStyle = `rgba(14, 165, 233, ${0.28 * (1 - distBetween / 55)})`;
-                            hCtx.lineWidth = 0.8;
-                            hCtx.moveTo(x, y);
-                            hCtx.lineTo(x2, y2);
-                            hCtx.stroke();
-                        }
-                    }
-
-                    // Node Core
-                    hCtx.beginPath();
-                    hCtx.arc(x, y, node.radius, 0, Math.PI * 2);
-                    hCtx.fillStyle = node.color + (0.45 + Math.sin(node.pulse) * 0.35) + ')';
-                    hCtx.shadowColor = 'rgba(56, 189, 248, 0.75)';
-                    hCtx.shadowBlur = 6;
-                    hCtx.fill();
-                    hCtx.shadowBlur = 0;
-                }
-
-                requestAnimationFrame(drawHeroCyber);
-            }
-
-            drawHeroCyber();
-        }
-
-        // Initialize Everything
-        window.addEventListener('DOMContentLoaded', () => {
-            renderGpaSubjects();
-            renderCertificates();
-            fetchRealtimeRates();
-            fetchLiveNews();
-            initHeroCyberAnimation();
-            
-            // Auto-refresh rates and news every hour
-            setInterval(fetchRealtimeRates, 60 * 60 * 1000);
-            setInterval(fetchLiveNews, 60 * 60 * 1000);
-
-            const savedKey = localStorage.getItem('gemini_api_key_custom');
-            const keyInput = document.getElementById('userGeminiKeyInput');
-            if (savedKey && keyInput) keyInput.value = savedKey;
-        });
-    </script>
-</body>
-</html>
+        function speak

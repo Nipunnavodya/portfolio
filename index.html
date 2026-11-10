@@ -796,7 +796,7 @@
     </div>
 
     <!-- ========================================================
-         2. PROJECTS MODAL (NEW 7 MAIN PROJECTS WITH DETAILED SUB-TOPICS & DIRECT GITHUB LINKS)
+         2. PROJECTS MODAL (ALL 7 PROJECTS + 7 INDIVIDUAL CATEGORIES FILTER TABS)
          ======================================================== -->
     <div id="projectsModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-900/40 backdrop-blur-sm" role="dialog" aria-modal="true">
         <div class="modal-box w-full max-w-5xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
@@ -815,28 +815,31 @@
                 </button>
             </div>
 
-            <!-- Categories Filter -->
-            <div class="px-6 pt-3 pb-2 flex items-center gap-2 border-b border-slate-100 overflow-x-auto text-xs font-medium">
-                <button onclick="filterProjects('all', this)" class="proj-tab-btn active px-3 py-1 rounded-full bg-slate-900 text-white font-semibold transition">
-                    All 7 Projects
+            <!-- Categories Filter Tabs (All Projects + 7 Specific Categories) -->
+            <div class="px-6 pt-3 pb-2 flex items-center gap-1.5 border-b border-slate-100 overflow-x-auto text-xs font-medium no-scrollbar">
+                <button onclick="filterProjects('all', this)" class="proj-tab-btn active px-3 py-1 rounded-full bg-slate-900 text-white font-semibold transition shrink-0">
+                    All Projects (7)
                 </button>
-                <button onclick="filterProjects('pm', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
-                    Agile & BA
+                <button onclick="filterProjects('agile-pm', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition shrink-0">
+                    1. Agile PM
                 </button>
-                <button onclick="filterProjects('architecture', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
-                    Systems & Integration
+                <button onclick="filterProjects('ba-requirements', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition shrink-0">
+                    2. Business Analysis
                 </button>
-                <button onclick="filterProjects('support', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
-                    ITSM & ERP
+                <button onclick="filterProjects('systems-integration', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition shrink-0">
+                    3. Systems Analysis
                 </button>
-                <button onclick="filterProjects('analytics', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
-                    Data & BI
+                <button onclick="filterProjects('it-erp-support', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition shrink-0">
+                    4. ITSM & ERP
                 </button>
-                <button onclick="filterProjects('qa', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
-                    QA Automation
+                <button onclick="filterProjects('data-bi', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition shrink-0">
+                    5. Data & BI
                 </button>
-                <button onclick="filterProjects('uiux', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition">
-                    UI/UX Design
+                <button onclick="filterProjects('qa-testing', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition shrink-0">
+                    6. Software Testing
+                </button>
+                <button onclick="filterProjects('uiux-design', this)" class="proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition shrink-0">
+                    7. UI/UX Design
                 </button>
             </div>
 
@@ -845,10 +848,10 @@
                 <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                     <!-- PROJECT 1 -->
-                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="pm">
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="agile-pm">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-blue-50 text-blue-700 rounded border border-blue-200">Track 01 • Project Management</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-blue-50 text-blue-700 rounded border border-blue-200">Track 01 • Agile Management</span>
                                 <span class="text-xs text-slate-400 font-mono">2026</span>
                             </div>
                             <h4 class="font-bold text-slate-900 text-sm mb-1.5">1. Agile Task & Project Management (Trello, Jira, ClickUp)</h4>
@@ -856,7 +859,6 @@
                                 End-to-end Agile execution lifecycle including continuous Kanban delivery, Scrum sprint metrics, and project scheduling.
                             </p>
                             
-                            <!-- Subtopics in Detail -->
                             <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px] space-y-1.5">
                                 <div class="text-slate-700">
                                     <strong class="text-slate-900 font-semibold">• Agile Kanban Board (Trello):</strong> E-commerce workflow with Backlog, To Do, In Progress, QA Testing, Done & automated Butler rules.
@@ -873,7 +875,6 @@
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Jira Software</span>
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Trello</span>
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">ClickUp</span>
-                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Scrum / Kanban</span>
                             </div>
                         </div>
                         <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
@@ -885,7 +886,7 @@
                     </div>
 
                     <!-- PROJECT 2 -->
-                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="pm">
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="ba-requirements">
                         <div>
                             <div class="flex items-center justify-between mb-2">
                                 <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-amber-50 text-amber-700 rounded border border-amber-200">Track 02 • Requirements Engineering</span>
@@ -896,7 +897,6 @@
                                 Standardized business process modeling, requirement traceability matrices, and visual backlog prioritization frameworks.
                             </p>
                             
-                            <!-- Subtopics in Detail -->
                             <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px] space-y-1.5">
                                 <div class="text-slate-700">
                                     <strong class="text-slate-900 font-semibold">• BPMN 2.0 Flowchart (Bizagi):</strong> E-commerce Checkout, payment authorization, and exception refund swimlane workflows.
@@ -913,7 +913,6 @@
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Bizagi Modeler</span>
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Confluence</span>
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Miro</span>
-                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">MoSCoW</span>
                             </div>
                         </div>
                         <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
@@ -925,7 +924,7 @@
                     </div>
 
                     <!-- PROJECT 3 -->
-                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="architecture">
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="systems-integration">
                         <div>
                             <div class="flex items-center justify-between mb-2">
                                 <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-orange-50 text-orange-700 rounded border border-orange-200">Track 03 • Systems Architecture</span>
@@ -936,7 +935,6 @@
                                 Formalized API contracts, distributed microservice architectural diagrams, and real-time webhook sync pipelines.
                             </p>
                             
-                            <!-- Subtopics in Detail -->
                             <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px] space-y-1.5">
                                 <div class="text-slate-700">
                                     <strong class="text-slate-900 font-semibold">• API Blueprint & Docs (Postman / Swagger):</strong> OpenAPI 3.0 Payment Gateway integration specs with UML Sequence Diagrams.
@@ -951,9 +949,8 @@
 
                             <div class="flex flex-wrap gap-1 mb-3">
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Postman</span>
-                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">OpenAPI 3.0</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Swagger</span>
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Draw.io</span>
-                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Bruno</span>
                             </div>
                         </div>
                         <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
@@ -965,10 +962,10 @@
                     </div>
 
                     <!-- PROJECT 4 -->
-                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="support">
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="it-erp-support">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-purple-50 text-purple-700 rounded border border-purple-200">Track 04 • IT Service Management & ERP</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-purple-50 text-purple-700 rounded border border-purple-200">Track 04 • ITSM & ERP</span>
                                 <span class="text-xs text-slate-400 font-mono">2026</span>
                             </div>
                             <h4 class="font-bold text-slate-900 text-sm mb-1.5">4. IT Support, Application Support & ERP Support</h4>
@@ -976,7 +973,6 @@
                                 ITIL-aligned service desk setups, complete open-source ERP implementation, and production error log triage.
                             </p>
                             
-                            <!-- Subtopics in Detail -->
                             <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px] space-y-1.5">
                                 <div class="text-slate-700">
                                     <strong class="text-slate-900 font-semibold">• ITSM Service Desk (Jira SM):</strong> Customer support portal, customized incident lifecycles, and multi-tier SLA rules.
@@ -992,7 +988,6 @@
                             <div class="flex flex-wrap gap-1 mb-3">
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Jira Service Mgmt</span>
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Odoo ERP</span>
-                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">ITIL v4</span>
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Log RCA</span>
                             </div>
                         </div>
@@ -1005,7 +1000,7 @@
                     </div>
 
                     <!-- PROJECT 5 -->
-                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="analytics">
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="data-bi">
                         <div>
                             <div class="flex items-center justify-between mb-2">
                                 <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-yellow-50 text-yellow-700 rounded border border-yellow-200">Track 05 • Data Analytics & DBA</span>
@@ -1016,7 +1011,6 @@
                                 Executive BI reporting dashboards, third normal form relational database modeling, and predictive customer retention analysis.
                             </p>
                             
-                            <!-- Subtopics in Detail -->
                             <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px] space-y-1.5">
                                 <div class="text-slate-700">
                                     <strong class="text-slate-900 font-semibold">• Executive BI Dashboard (Power BI):</strong> Interactive KPI dashboards tracking Revenue velocity, Churn %, and YoY cohort growth.
@@ -1031,8 +1025,7 @@
 
                             <div class="flex flex-wrap gap-1 mb-3">
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Power BI</span>
-                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">MySQL / 3NF</span>
-                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">DBeaver</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">MySQL 3NF</span>
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Python EDA</span>
                             </div>
                         </div>
@@ -1045,7 +1038,7 @@
                     </div>
 
                     <!-- PROJECT 6 -->
-                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="qa">
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between" data-category="qa-testing">
                         <div>
                             <div class="flex items-center justify-between mb-2">
                                 <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-emerald-50 text-emerald-700 rounded border border-emerald-200">Track 06 • QA & Test Automation</span>
@@ -1056,7 +1049,6 @@
                                 Complete QA lifecycle covering 50+ enterprise test scenarios, defect life-cycle tracking in Jira, and browser-driven POM automation.
                             </p>
                             
-                            <!-- Subtopics in Detail -->
                             <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px] space-y-1.5">
                                 <div class="text-slate-700">
                                     <strong class="text-slate-900 font-semibold">• Manual Test Case Suite (TestRail):</strong> 50+ positive/negative, boundary value, and regression test cases for web applications.
@@ -1073,7 +1065,6 @@
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Playwright</span>
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">TypeScript</span>
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">TestRail</span>
-                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Jira Bug Tracker</span>
                             </div>
                         </div>
                         <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
@@ -1085,10 +1076,10 @@
                     </div>
 
                     <!-- PROJECT 7 -->
-                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between md:col-span-2" data-category="uiux">
+                    <div class="proj-card p-4 rounded-xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-brand-300 hover:shadow-xs transition flex flex-col justify-between md:col-span-2" data-category="uiux-design">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-rose-50 text-rose-700 rounded border border-rose-200">Track 07 • UI/UX & Digital Experience</span>
+                                <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-rose-50 text-rose-700 rounded border border-rose-200">Track 07 • UI/UX Design</span>
                                 <span class="text-xs text-slate-400 font-mono">2026</span>
                             </div>
                             <h4 class="font-bold text-slate-900 text-sm mb-1.5">7. UI/UX Engineering & Design</h4>
@@ -1096,7 +1087,6 @@
                                 Scalable atomic design system architectures, clickable mobile app user journeys, and WCAG accessibility compliance evaluations.
                             </p>
                             
-                            <!-- Subtopics in Detail -->
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-2 bg-white/80 p-2.5 rounded-lg border border-slate-200/80 mb-3 text-[11px]">
                                 <div class="text-slate-700">
                                     <strong class="text-slate-900 font-semibold">• Component Design System (Figma):</strong> Reusable design tokens, buttons, colors, typography scales, and auto-layout UI states.
@@ -1113,7 +1103,6 @@
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Figma</span>
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">Design Systems</span>
                                 <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">AXE DevTools</span>
-                                <span class="px-2 py-0.5 text-[10px] font-mono bg-white text-slate-700 border border-slate-200 rounded">WCAG 2.1 AA</span>
                             </div>
                         </div>
                         <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
@@ -1316,9 +1305,9 @@
         // Projects Filter
         function filterProjects(category, btn) {
             document.querySelectorAll('.proj-tab-btn').forEach(b => {
-                b.className = "proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition text-xs font-medium";
+                b.className = "proj-tab-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition text-xs font-medium shrink-0";
             });
-            btn.className = "proj-tab-btn active px-3 py-1 rounded-full bg-slate-900 text-white font-semibold transition text-xs";
+            btn.className = "proj-tab-btn active px-3 py-1 rounded-full bg-slate-900 text-white font-semibold transition text-xs shrink-0";
 
             const cards = document.querySelectorAll('.proj-card');
             cards.forEach(card => {
@@ -1707,9 +1696,9 @@
         function setNewsCategory(category, btn) {
             currentNewsCategory = category;
             document.querySelectorAll('.news-tab-btn').forEach(b => {
-                b.className = "news-tab-btn px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition";
+                b.className = "news-tab-btn px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition shrink-0";
             });
-            btn.className = "news-tab-btn active px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-900 text-white transition";
+            btn.className = "news-tab-btn active px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-900 text-white transition shrink-0";
             fetchLiveNews();
         }
 
@@ -1728,190 +1717,3 @@
             try {
                 const diffMs = Date.now() - new Date(dateString).getTime();
                 const mins = Math.max(1, Math.floor(diffMs / 60000));
-                if (mins < 60) return `${mins}m ago`;
-                const hours = Math.floor(mins / 60);
-                if (hours < 24) return `${hours}h ago`;
-                return `${Math.floor(hours / 24)}d ago`;
-            } catch (e) {
-                return "Just now";
-            }
-        }
-
-        async function fetchLiveNews() {
-            const icon = document.getElementById('news-refresh-icon');
-            const statusLabel = document.getElementById('news-status-label');
-
-            if (icon) icon.classList.add('fa-spin');
-            if (statusLabel) statusLabel.textContent = "Fetching latest articles...";
-
-            const customKey = localStorage.getItem('custom_news_api_key');
-            if (customKey) {
-                try {
-                    const gnewsUrl = `https://gnews.io/api/v4/top-headlines?category=${currentNewsCategory === 'technology' ? 'technology' : 'general'}&lang=en&apikey=${customKey}&max=5`;
-                    const res = await fetch(gnewsUrl);
-                    if (res.ok) {
-                        const data = await res.json();
-                        if (data.articles && data.articles.length > 0) {
-                            const formatted = data.articles.map(a => ({
-                                title: a.title,
-                                desc: a.description || "Read full report on source portal.",
-                                source: a.source?.name || "GNews",
-                                timeAgo: getTimeDifference(a.publishedAt),
-                                url: a.url
-                            }));
-                            renderNews(formatted);
-                            if (statusLabel) statusLabel.textContent = "Live Feed Updated";
-                            if (icon) setTimeout(() => icon.classList.remove('fa-spin'), 500);
-                            return;
-                        }
-                    }
-                } catch (e) {
-                    console.log('Custom GNews fetch failed, switching to live Dev stream:', e);
-                }
-            }
-
-            try {
-                let tag = "technology";
-                if (currentNewsCategory === 'webdev') tag = "webdev";
-                if (currentNewsCategory === 'devops') tag = "cloud";
-
-                const url = `https://dev.to/api/articles?tag=${tag}&per_page=5&state=fresh`;
-                const res = await fetch(url);
-                if (res.ok) {
-                    const articles = await res.json();
-                    if (articles && articles.length > 0) {
-                        const formatted = articles.map(art => ({
-                            title: art.title,
-                            desc: art.description || (art.tag_list ? "Topics: " + art.tag_list.join(", ") : "Click to view full technical brief."),
-                            source: art.user?.name || "Dev Community",
-                            timeAgo: getTimeDifference(art.published_at || art.created_at),
-                            url: art.url
-                        }));
-                        renderNews(formatted);
-                        if (statusLabel) statusLabel.textContent = `Live ${tag.toUpperCase()} Stream`;
-                        if (icon) setTimeout(() => icon.classList.remove('fa-spin'), 500);
-                        return;
-                    }
-                }
-            } catch (err) {
-                console.log('Live dev stream fetch note:', err);
-            }
-
-            const fallbackNews = [
-                {
-                    title: "Next-Gen AI Agents Transform Agile Sprint Planning & CI Pipelines",
-                    desc: "Automated test generation and user-story breakdown tools reduce engineering cycles by 35%.",
-                    source: "TechRadar Live",
-                    timeAgo: "Just now",
-                    url: "https://news.ycombinator.com"
-                },
-                {
-                    title: "Modern Microservices Shift Toward Real-Time Webhook Architectures",
-                    desc: "Developers migrate away from long polling toward reliable decoupled event-driven webhook relays.",
-                    source: "InfoQ",
-                    timeAgo: "14m ago",
-                    url: "https://news.ycombinator.com"
-                },
-                {
-                    title: "Playwright & TypeScript Set Benchmark for Web QA Automation in 2026",
-                    desc: "Parallel execution and robust visual assertions dominate modern continuous integration test matrices.",
-                    source: "DevOps Wire",
-                    timeAgo: "32m ago",
-                    url: "https://news.ycombinator.com"
-                }
-            ];
-
-            renderNews(fallbackNews);
-            if (statusLabel) statusLabel.textContent = "Live Feed Synced";
-            if (icon) setTimeout(() => icon.classList.remove('fa-spin'), 500);
-        }
-
-        function renderNews(items) {
-            const list = document.getElementById('newsStreamList');
-            if (!list) return;
-            list.innerHTML = '';
-
-            items.forEach(item => {
-                const a = document.createElement('a');
-                a.href = item.url;
-                a.target = "_blank";
-                a.rel = "noopener noreferrer";
-                a.className = "block p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-pink-300 hover:bg-white hover:shadow-xs transition group";
-                a.innerHTML = `
-                    <div class="flex items-center justify-between text-[10px] text-slate-400 mb-1">
-                        <span class="font-bold text-pink-600 uppercase tracking-wider">${item.source}</span>
-                        <span class="flex items-center gap-1 font-mono"><i class="fa-regular fa-clock"></i> ${item.timeAgo}</span>
-                    </div>
-                    <h4 class="text-xs font-semibold text-slate-900 group-hover:text-pink-600 line-clamp-1 transition mb-0.5">${item.title}</h4>
-                    <p class="text-[11px] text-slate-500 line-clamp-2 leading-tight">${item.desc}</p>
-                `;
-                list.appendChild(a);
-            });
-        }
-
-        /* ========================================================
-           4. FLOATING AI ASSISTANT (GEMINI + VOICE + CONTEXT UPDATED)
-           ======================================================== */
-        let isChatOpen = false;
-        let isVoiceEnabled = true;
-        let isSpeechRecognitionActive = false;
-        let speechRecognitionInstance = null;
-
-        const NIPUN_SYSTEM_PROMPT = `
-You are the personal AI Assistant for Nipun Navodya, hosted on his professional portfolio website.
-Here is authentic verified background information about Nipun:
-- Name: Nipun Navodya
-- Education: Undergraduate Student in Information Systems Engineering (ISE) at SLIIT (Faculty of Computing).
-- Target Roles: Agile Project Manager / Scrum Master, Business Analyst (BA), Systems Analyst & Integration Specialist, IT & ERP Support Engineer (Odoo), Software QA Automation Engineer.
-- Featured 7 Technical Projects & Direct GitHub Repositories:
-  1. Agile Task & Project Management (Trello, Jira, ClickUp) -> https://github.com/Nipunnavodya/Agile-Task-and-Project-Management
-  2. Business Analysis & Requirements Engineering (Bizagi, Confluence, Miro) -> https://github.com/Nipunnavodya/Business-Analysis-and-Requirements-Engineering
-  3. Systems Analysis & Integration Specialist (Postman, Swagger, Draw.io, Bruno) -> https://github.com/Nipunnavodya/Systems-Analysis-and-Integration-Specialist
-  4. IT Support, Application Support & ERP Support (Jira SM, Odoo ERP, Log Debugging) -> https://github.com/Nipunnavodya/IT-Support-Application-Support-and-ERP-Support
-  5. Data Analyst, DBA & Business Intelligence (Power BI, MySQL 3NF, Python Pandas) -> https://github.com/Nipunnavodya/Data-Analyst-DBA-and-Business-Intelligence
-  6. Software Testing (Manual & Automation) (Playwright TypeScript, TestRail, Jira) -> https://github.com/Nipunnavodya/Software-Testing-Manual-and-Automation
-  7. UI/UX Engineering & Design (Figma Design Systems, Clickable Mobile Prototype, WCAG 2.1) -> https://github.com/Nipunnavodya/UI-UX-Engineering-and-Design
-- Contact Info:
-  * Primary Email: nipunnavodya4@gmail.com
-  * Academic Email: nipun.navodya.ise@gmail.com
-  * Mobile: 072 922 4809 / 070 408 8271
-  * GitHub: https://github.com/Nipunnavodya
-- Behavior: Be professional, warm, concise, and helpful. You represent Nipun to recruiters, engineering managers, and collaborators. You can answer in English or friendly Sinhala if queried in Sinhala.
-`;
-
-        let chatHistory = [];
-
-        function toggleAiChat() {
-            const chatWin = document.getElementById('aiChatWindow');
-            const icon = document.getElementById('aiBtnIcon');
-            const promptBubble = document.getElementById('aiPromptBubble');
-            
-            isChatOpen = !isChatOpen;
-            if (isChatOpen) {
-                chatWin.classList.remove('chat-closed');
-                chatWin.classList.add('chat-open');
-                icon.className = "fa-solid fa-chevron-down text-xl";
-                if (promptBubble) promptBubble.style.display = 'none';
-                setTimeout(() => { document.getElementById('aiChatInput').focus(); }, 100);
-            } else {
-                chatWin.classList.add('chat-closed');
-                chatWin.classList.remove('chat-open');
-                icon.className = "fa-solid fa-robot text-2xl";
-                if (window.speechSynthesis) window.speechSynthesis.cancel();
-            }
-        }
-
-        function toggleVoiceSpeech() {
-            isVoiceEnabled = !isVoiceEnabled;
-            const icon = document.getElementById('ttsIcon');
-            if (isVoiceEnabled) {
-                icon.className = "fa-solid fa-volume-high";
-                appendSystemNotice("Voice output enabled 🔊");
-            } else {
-                icon.className = "fa-solid fa-volume-xmark";
-                if (window.speechSynthesis) window.speechSynthesis.cancel();
-                appendSystemNotice("Voice output muted 🔇");
-            }
-        }
-
-        function speak

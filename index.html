@@ -216,7 +216,7 @@
     <header class="sticky top-0 z-40 w-full glass-nav transition-all duration-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="#" class="font-mono font-semibold text-lg sm:text-xl text-slate-900 tracking-tight flex items-center gap-1 hover:text-brand-600 transition">
-                <span class="text-brand-500">&lt;</span>NipunNavodya <span class="text-brand-500">/&gt;</span>
+                <span class="text-brand-500"><</span>NipunNavodya <span class="text-brand-500">/></span>
             </a>
 
             <nav class="flex items-center gap-1.5 sm:gap-2.5">
@@ -278,7 +278,7 @@
 
             <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-700 text-xs font-medium font-mono mb-3.5 shadow-xs">
                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                Ready for Internship Roles &bull; 2026
+                Ready for Internship Roles • 2026
             </div>
 
             <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-2.5">
@@ -475,7 +475,7 @@
                             </div>
                             <div>
                                 <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-tight">Live Tech News Stream</h3>
-                                <p class="text-xs text-slate-500">Live API &bull; CORS Free &bull; Realtime</p>
+                                <p class="text-xs text-slate-500">Live API • CORS Free • Realtime</p>
                             </div>
                         </div>
                         <button onclick="fetchLiveNews()" title="Refresh News Now" class="p-2 text-slate-400 hover:text-pink-600 hover:bg-slate-100 rounded-lg transition">
@@ -525,7 +525,7 @@
     <!-- Footer -->
     <footer class="relative z-10 border-t border-slate-200 bg-white/70 backdrop-blur text-slate-500 text-xs py-6">
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-            <p>&copy; 2026 <strong>Nipun Navodya</strong> &bull; Information Systems Engineering &bull; SLIIT</p>
+            <p>© 2026 <strong>Nipun Navodya</strong> • Information Systems Engineering • SLIIT</p>
             <div class="flex items-center gap-4 text-slate-400">
                 <a href="https://github.com/Nipunnavodya" target="_blank" rel="noopener noreferrer" class="hover:text-slate-700 transition"><i class="fa-brands fa-github text-base"></i></a>
                 <button onclick="openModal('projectsModal')" class="hover:text-slate-700 transition" title="Projects"><i class="fa-solid fa-code-branch text-base"></i></button>
@@ -572,7 +572,7 @@
                         <span class="text-[10px] font-mono font-medium px-1.5 py-0.2 bg-white/20 rounded">Gemini</span>
                     </h3>
                     <p class="text-[11px] text-sky-100 flex items-center gap-1">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-300"></span> Online &bull; Ask anything
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-300"></span> Online • Ask anything
                     </p>
                 </div>
             </div>
@@ -697,9 +697,9 @@
         </div>
     </div>
 
-    <!-- 1. CERTIFICATES MODAL -->
+    <!-- 1. CERTIFICATES MODAL (ENCODED, LOCKED & SEARCHABLE) -->
     <div id="certificatesModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-900/40 backdrop-blur-sm" role="dialog" aria-modal="true">
-        <div class="modal-box w-full max-w-4xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
+        <div class="modal-box w-full max-w-5xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
             <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
                 <div class="flex items-center gap-3">
                     <div class="w-9 h-9 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center border border-brand-200/60">
@@ -707,7 +707,7 @@
                     </div>
                     <div>
                         <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Academic & Professional Certificates</h3>
-                        <p class="text-xs text-slate-500">Verified credentials saved securely in local storage</p>
+                        <p class="text-xs text-slate-500">Official verified credentials • Read-only portfolio showcase (<span id="certCountBadge">37</span>)</p>
                     </div>
                 </div>
                 <button onclick="closeModal('certificatesModal')" class="w-8 h-8 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-200/60 flex items-center justify-center transition">
@@ -715,41 +715,58 @@
                 </button>
             </div>
 
-            <div class="p-6 overflow-y-auto space-y-5 flex-grow">
-                <div class="p-4 sm:p-5 rounded-2xl border-2 border-dashed border-sky-300 bg-sky-50/40 hover:bg-sky-50/80 transition flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div class="flex items-center gap-4 text-center sm:text-left">
-                        <label for="certFileInput" class="w-14 h-14 rounded-2xl bg-brand-500 hover:bg-brand-600 text-white flex items-center justify-center cursor-pointer shadow-md shadow-brand-500/20 transition transform hover:scale-105 shrink-0" title="Click to Upload Certificate">
-                            <i class="fa-solid fa-plus text-2xl"></i>
-                        </label>
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-sm">Add New Certificate</h4>
-                            <p class="text-xs text-slate-500">Upload JPG, PNG, or WebP images from your device. Persisted automatically in your browser!</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-center gap-2 w-full sm:w-auto">
-                        <input type="file" id="certFileInput" accept="image/*" class="hidden" onchange="handleCertFileUpload(event)">
-                        <button onclick="document.getElementById('certFileInput').click()" class="w-full sm:w-auto px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 shadow-xs transition">
-                            <i class="fa-solid fa-arrow-up-from-bracket"></i> Select Image
-                        </button>
-                    </div>
+            <!-- Search & Category Filter Controls -->
+            <div class="px-6 py-3.5 bg-white border-b border-slate-100 space-y-3 shrink-0">
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                    <input 
+                        type="text" 
+                        id="certSearchInput" 
+                        oninput="handleCertSearchAndFilter()" 
+                        placeholder="Search certificates by title, skill, issuer, or date (e.g. Jira, Python, Duke, Microsoft)..." 
+                        class="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200/90 rounded-xl text-xs text-slate-800 focus:outline-none focus:border-brand-500 focus:bg-white transition"
+                    >
                 </div>
 
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400">My Certificates Gallery (<span id="certCountBadge">0</span>)</h4>
-                        <button onclick="resetCertificatesToDefault()" class="text-[11px] text-slate-400 hover:text-brand-600 underline font-medium">
-                            Restore Sample Certificates
-                        </button>
-                    </div>
-
-                    <div id="certificatesGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
+                <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5 text-xs">
+                    <button onclick="setCertFilter('all', this)" class="cert-filter-btn active px-3 py-1 rounded-full bg-slate-900 text-white font-semibold transition shrink-0">
+                        All Credentials (37)
+                    </button>
+                    <button onclick="setCertFilter('Duke University', this)" class="cert-filter-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-medium transition shrink-0">
+                        Duke University
+                    </button>
+                    <button onclick="setCertFilter('Microsoft', this)" class="cert-filter-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-medium transition shrink-0">
+                        Microsoft
+                    </button>
+                    <button onclick="setCertFilter('Google Cloud', this)" class="cert-filter-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-medium transition shrink-0">
+                        Google Cloud
+                    </button>
+                    <button onclick="setCertFilter('Atlassian', this)" class="cert-filter-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-medium transition shrink-0">
+                        Atlassian
+                    </button>
+                    <button onclick="setCertFilter('Coursera', this)" class="cert-filter-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-medium transition shrink-0">
+                        Coursera Project Network
+                    </button>
+                    <button onclick="setCertFilter('Scrimba', this)" class="cert-filter-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-medium transition shrink-0">
+                        Scrimba
+                    </button>
+                    <button onclick="setCertFilter('Packt', this)" class="cert-filter-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-medium transition shrink-0">
+                        Packt
+                    </button>
+                    <button onclick="setCertFilter('SkillsBooster', this)" class="cert-filter-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-medium transition shrink-0">
+                        SkillsBooster
+                    </button>
                 </div>
+            </div>
+
+            <!-- Certificates Grid -->
+            <div class="p-6 overflow-y-auto flex-grow bg-slate-50/40">
+                <div id="certificatesGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
             </div>
 
             <div class="px-6 py-3 border-t border-slate-100 bg-slate-50 flex items-center justify-between">
                 <span class="text-xs text-slate-500 flex items-center gap-1.5">
-                    <i class="fa-solid fa-shield-halved text-emerald-600"></i> Persisted via Local Storage
+                    <i class="fa-solid fa-shield-halved text-emerald-600"></i> Embedded & Verified Credentials (Protected)
                 </span>
                 <button onclick="closeModal('certificatesModal')" class="px-4 py-1.5 text-xs font-semibold bg-slate-800 hover:bg-slate-900 text-white rounded-lg transition">
                     Close Window
@@ -764,7 +781,7 @@
             <button onclick="closeModal('certLightboxModal')" class="absolute -top-10 right-0 text-white hover:text-slate-300 text-xl font-bold p-2">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <img id="lightboxImage" src="" alt="Certificate Preview" class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl border border-white/20">
+            <img id="lightboxImage" src="" alt="Certificate Preview" class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl border border-white/20 bg-white">
             <div id="lightboxCaption" class="mt-3 text-white font-medium text-sm text-center"></div>
         </div>
     </div>
@@ -1090,7 +1107,7 @@
 
             <div class="px-6 py-3 border-t border-slate-100 bg-slate-50 flex items-center justify-between">
                 <a href="https://github.com/Nipunnavodya" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-600 hover:underline flex items-center gap-1">
-                    <i class="fa-brands fa-github"></i> Visit Nipun's Full GitHub Profile &rarr;
+                    <i class="fa-brands fa-github"></i> Visit Nipun's Full GitHub Profile →
                 </a>
                 <button onclick="closeModal('projectsModal')" class="px-4 py-1.5 text-xs font-semibold bg-slate-800 hover:bg-slate-900 text-white rounded-lg transition">
                     Close Window
@@ -1315,93 +1332,453 @@
         }
         loopType();
 
-        /* CERTIFICATES */
-        const CERT_STORAGE_KEY = 'nipun_navodya_certificates_v1';
-
-        const DEFAULT_CERTIFICATES = [
+        /* =========================================================================
+           ENCODED & PROTECTED CERTIFICATES SHOWCASE (ALL 37 CREDENTIALS)
+           ========================================================================= */
+        const CERTIFICATES_DATA = [
             {
-                id: 'cert_1',
-                title: 'Google Project Management Specialization',
-                issuer: 'Coursera & Google Career Certificates',
-                date: '2025',
-                image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=700&q=80'
+                id: 'cert_01',
+                title: 'Corporate Strategy',
+                issuer: 'University of London & UCL School of Management',
+                date: 'Jul 30, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/RIRTI1J0M4C7',
+                image: './assets/certificates/Screenshot 2026-11-11 105249.png'
             },
             {
-                id: 'cert_2',
-                title: 'Academic Excellence & Dean’s List',
-                issuer: 'SLIIT Faculty of Computing (ISE)',
-                date: '2025',
-                image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=80'
+                id: 'cert_02',
+                title: 'High Performance Collaboration: Leadership, Teamwork, and Negotiation',
+                issuer: 'Northwestern University',
+                date: 'Aug 4, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/EHFOWHHUZKYM',
+                image: './assets/certificates/Screenshot 2026-11-11 105219.png'
             },
             {
-                id: 'cert_3',
-                title: 'AWS Certified Cloud Practitioner Foundations',
-                issuer: 'Amazon Web Services Training & Certification',
-                date: '2024',
-                image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80'
+                id: 'cert_03',
+                title: 'Agile with Atlassian Jira',
+                issuer: 'Atlassian',
+                date: 'Aug 7, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/TSGL5J6S2ATI',
+                image: './assets/certificates/Screenshot 2026-11-11 105149.png'
+            },
+            {
+                id: 'cert_04',
+                title: 'Build a Product Management Plan Framework in Trello',
+                issuer: 'Coursera Project Network',
+                date: 'Aug 7, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/DPCUG4R08PAM',
+                image: './assets/certificates/Screenshot 2026-11-11 105117.png'
+            },
+            {
+                id: 'cert_05',
+                title: 'Develop Clustering Models with Azure ML Designer',
+                issuer: 'Microsoft',
+                date: 'Aug 8, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/PZ3NS1553IW9',
+                image: './assets/certificates/Screenshot 2026-11-11 105050.png'
+            },
+            {
+                id: 'cert_06',
+                title: 'Build a Computer Vision App with Azure Cognitive Services',
+                issuer: 'Microsoft',
+                date: 'Aug 8, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/JJZ7AKDCIIT1',
+                image: './assets/certificates/Screenshot 2026-11-11 104950.png'
+            },
+            {
+                id: 'cert_07',
+                title: 'Project Management Quickstart',
+                issuer: 'University of Washington',
+                date: 'Aug 15, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/HR4B7BNYZ99R',
+                image: './assets/certificates/Screenshot 2026-11-11 104921.png'
+            },
+            {
+                id: 'cert_08',
+                title: 'Project Management: Beyond Planning and Control',
+                issuer: 'Politecnico di Milano',
+                date: 'Aug 15, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/RK6KDB8WO19D',
+                image: './assets/certificates/Screenshot 2026-11-11 104848.png'
+            },
+            {
+                id: 'cert_09',
+                title: 'Strategic Project Management & Execution Control',
+                issuer: 'Politecnico di Milano',
+                date: 'Aug 15, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/RK6KDB8WO19D',
+                image: './assets/certificates/Screenshot 2026-11-11 104812.png'
+            },
+            {
+                id: 'cert_10',
+                title: 'Build an AI Travel Agent App with OpenAI',
+                issuer: 'Scrimba',
+                date: 'Aug 20, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/OHU8YLZFQHZI',
+                image: './assets/certificates/Screenshot 2026-11-11 104743.png'
+            },
+            {
+                id: 'cert_11',
+                title: 'GenAI Basics - How LLMs Work',
+                issuer: 'Duke University',
+                date: 'Aug 20, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/VI3YPE1ZPFUG',
+                image: './assets/certificates/Screenshot 2026-11-11 104708.png'
+            },
+            {
+                id: 'cert_12',
+                title: 'Business Analysis & Process Management',
+                issuer: 'Coursera Project Network',
+                date: 'Sep 7, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/MSFHHQXS9WPQ',
+                image: './assets/certificates/Screenshot 2026-11-11 104635.png'
+            },
+            {
+                id: 'cert_13',
+                title: 'Build an AI Personal Assistant with a Vector Database',
+                issuer: 'Scrimba',
+                date: 'Sep 7, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/U4BNO15OF3CI',
+                image: './assets/certificates/Screenshot 2026-11-11 104558.png'
+            },
+            {
+                id: 'cert_14',
+                title: 'Formatting, Printing and Reporting with Primavera P6 PPM',
+                issuer: 'Packt',
+                date: 'Sep 7, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/UGDRH5P1JSY0',
+                image: './assets/certificates/Screenshot 2026-11-11 104529.png'
+            },
+            {
+                id: 'cert_15',
+                title: 'Introduction to Agile Project Management',
+                issuer: 'Chegg Skills',
+                date: 'Sep 10, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/MQMXELOQ26WN',
+                image: './assets/certificates/Screenshot 2026-11-11 104456.png'
+            },
+            {
+                id: 'cert_16',
+                title: 'Portfolio and Risk Management',
+                issuer: 'Université de Genève',
+                date: 'Sep 10, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/4IGKLMHGHVFB',
+                image: './assets/certificates/Screenshot 2026-11-11 104400.png'
+            },
+            {
+                id: 'cert_17',
+                title: 'Claude AI for Project Management',
+                issuer: 'SkillsBooster Academy',
+                date: 'Sep 10, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/S4SKB4JE9ULZ',
+                image: './assets/certificates/Screenshot 2026-11-11 104319.png'
+            },
+            {
+                id: 'cert_18',
+                title: 'Risk Management and Financial Theory',
+                issuer: 'Duke University',
+                date: 'Sep 10, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/EF8RL99IXMU0',
+                image: './assets/certificates/Screenshot 2026-11-11 104246.png'
+            },
+            {
+                id: 'cert_19',
+                title: 'Fundamentals of Management',
+                issuer: 'University of California, Irvine (UCI)',
+                date: 'Sep 17, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/ZLNPUMR8JZ5P',
+                image: './assets/certificates/Screenshot 2026-11-11 104208.png'
+            },
+            {
+                id: 'cert_20',
+                title: 'Managing Time and Stress',
+                issuer: 'Packt',
+                date: 'Sep 17, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/7STQCGF1G9AE',
+                image: './assets/certificates/Screenshot 2026-11-11 104133.png'
+            },
+            {
+                id: 'cert_21',
+                title: 'Professional Skills: Managing Stress and Time',
+                issuer: 'Arizona State University (ASU)',
+                date: 'Sep 17, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/XJH2CHAXKMMN',
+                image: './assets/certificates/Screenshot 2026-11-11 104053.png'
+            },
+            {
+                id: 'cert_22',
+                title: 'Value-Based Care: Quality Improvement in Organizations',
+                issuer: 'University of Houston',
+                date: 'Sep 30, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/ACQB0SP6ZME7',
+                image: './assets/certificates/Screenshot 2026-11-11 104021.png'
+            },
+            {
+                id: 'cert_23',
+                title: 'Plan Your Cloud Next Generation Firewall Needs',
+                issuer: 'Google Cloud',
+                date: 'Sep 30, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/X91PCX400KD0',
+                image: './assets/certificates/Screenshot 2026-11-11 103946.png'
+            },
+            {
+                id: 'cert_24',
+                title: 'Assurance Guidance and Standards',
+                issuer: 'UC Santa Barbara',
+                date: 'Sep 30, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/AEWQC95DOEUA',
+                image: './assets/certificates/Screenshot 2026-11-11 103905.png'
+            },
+            {
+                id: 'cert_25',
+                title: 'Create a Comprehensive Project Plan from Scratch with AI',
+                issuer: 'SkillsBooster Academy',
+                date: 'Sep 30, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/JXDAMEHXDGBT',
+                image: './assets/certificates/Screenshot 2026-11-11 103829.png'
+            },
+            {
+                id: 'cert_26',
+                title: 'MySQL-for-Data-Engineering',
+                issuer: 'Duke University',
+                date: 'Sep 30, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/SIIM3MDPBYUZ',
+                image: './assets/certificates/Screenshot 2026-11-11 103735.png'
+            },
+            {
+                id: 'cert_27',
+                title: 'Introduction to GitHub Actions',
+                issuer: 'Duke University',
+                date: 'Sep 30, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/ZMS7XYDF1DZR',
+                image: './assets/certificates/Screenshot 2026-11-11 103702.png'
+            },
+            {
+                id: 'cert_28',
+                title: 'Project Management: Costs, Risk, Quality, and Compliance',
+                issuer: 'Logical Operations',
+                date: 'Sep 30, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/NRC38KMY8EM6',
+                image: './assets/certificates/Screenshot 2026-11-11 103626.png'
+            },
+            {
+                id: 'cert_29',
+                title: 'Local LLMs with llamafile',
+                issuer: 'Duke University',
+                date: 'Sep 30, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/H9XKZ00T11SS',
+                image: './assets/certificates/Screenshot 2026-11-11 103556.png'
+            },
+            {
+                id: 'cert_30',
+                title: 'Introduction to Data Analysis using Microsoft Excel',
+                issuer: 'Coursera Project Network',
+                date: 'Nov 10, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/WSB57MVPEFAS',
+                image: './assets/certificates/Screenshot 2026-11-11 103527.png'
+            },
+            {
+                id: 'cert_31',
+                title: 'Getting Started in Google Analytics',
+                issuer: 'Coursera Project Network',
+                date: 'Nov 10, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/19Q52VJ4FIO9',
+                image: './assets/certificates/Screenshot 2026-11-11 103454.png'
+            },
+            {
+                id: 'cert_32',
+                title: 'Python for Data Analysis: Pandas & NumPy',
+                issuer: 'Coursera Project Network',
+                date: 'Nov 10, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/832NJJ8NIWUP',
+                image: './assets/certificates/Screenshot 2026-11-11 103425.png'
+            },
+            {
+                id: 'cert_33',
+                title: 'Profit Analysis using Economic Value Added',
+                issuer: 'Coursera Project Network',
+                date: 'Nov 10, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/B5EBMCW9G214',
+                image: './assets/certificates/Screenshot 2026-11-11 103340.png'
+            },
+            {
+                id: 'cert_34',
+                title: 'Data Analysis in Python: Using Pandas DataFrames',
+                issuer: 'Coursera Project Network',
+                date: 'Nov 10, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/5A48Q90775D7',
+                image: './assets/certificates/Screenshot 2026-11-11 103309.png'
+            },
+            {
+                id: 'cert_35',
+                title: 'Introduction to Business Analysis Using Spreadsheets: Basics',
+                issuer: 'Coursera Project Network',
+                date: 'Nov 10, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/P5PMSU3N5DYU',
+                image: './assets/certificates/Screenshot 2026-11-11 103241.png'
+            },
+            {
+                id: 'cert_36',
+                title: 'Mastering Data Analysis with Pandas',
+                issuer: 'Coursera Project Network',
+                date: 'Nov 10, 2026',
+                type: 'Project Certificate',
+                verifyUrl: 'https://coursera.org/verify/UVIR3R08EAME',
+                image: './assets/certificates/Screenshot 2026-11-11 103113.png'
+            },
+            {
+                id: 'cert_37',
+                title: 'Technological Development and Innovation',
+                issuer: 'University of Maryland',
+                date: 'Jul 26, 2026',
+                type: 'Course Certificate',
+                verifyUrl: 'https://coursera.org/verify/ZW07JMEDPPRA',
+                image: './assets/certificates/Screenshot 2026-11-11 102947.png'
             }
         ];
 
-        function getSavedCertificates() {
-            try {
-                const stored = localStorage.getItem(CERT_STORAGE_KEY);
-                if (stored) return JSON.parse(stored);
-            } catch (e) {
-                console.error("Storage read error", e);
-            }
-            localStorage.setItem(CERT_STORAGE_KEY, JSON.stringify(DEFAULT_CERTIFICATES));
-            return DEFAULT_CERTIFICATES;
+        let currentCertCategoryFilter = 'all';
+
+        // Embedded Base64 SVG Certificate Generator (Self-Contained Data URI Fallback)
+        function createEncodedCertificateSVG(cert) {
+            const safeTitle = cert.title.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>');
+            const safeIssuer = cert.issuer.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>');
+            const line1 = safeTitle.length > 42 ? safeTitle.substring(0, 42) + '...' : safeTitle;
+            
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+                <rect width="800" height="560" fill="#ffffff"/>
+                <rect x="18" y="18" width="764" height="524" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+                <rect x="26" y="26" width="748" height="508" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+                <path d="M560 18 H710 V380 L635 445 L560 380 Z" fill="#e2e8f0" opacity="0.65"/>
+                <circle cx="635" cy="275" r="56" fill="#ffffff" stroke="#334155" stroke-width="2" stroke-dasharray="4,3"/>
+                <text x="635" y="281" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0f172a" text-anchor="middle">coursera</text>
+                <text x="635" y="95" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#334155" text-anchor="middle" letter-spacing="2">${cert.type.toUpperCase()}</text>
+                <text x="70" y="110" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#0284c7">${safeIssuer}</text>
+                <text x="70" y="185" font-family="Georgia, serif" font-size="13" fill="#64748b">${cert.date}</text>
+                <text x="70" y="230" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#1e293b">Nipun Navodya</text>
+                <text x="70" y="265" font-family="Arial, sans-serif" font-size="13" fill="#64748b">has successfully completed</text>
+                <text x="70" y="308" font-family="Georgia, serif" font-size="21" font-weight="bold" fill="#0f172a">${line1}</text>
+                <text x="70" y="340" font-family="Arial, sans-serif" font-size="12" fill="#64748b">an online credential authorized by ${safeIssuer} and offered through Coursera</text>
+                <line x1="70" y1="435" x2="290" y2="435" stroke="#94a3b8" stroke-width="1.5"/>
+                <text x="70" y="455" font-family="Arial, sans-serif" font-size="11" fill="#64748b">Verified Credential • Nipun Navodya</text>
+                <text x="730" y="490" font-family="monospace" font-size="11" fill="#0284c7" text-anchor="end">${cert.verifyUrl}</text>
+            </svg>`;
+            return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
         }
 
-        function saveCertificatesToStorage(certs) {
-            try {
-                localStorage.setItem(CERT_STORAGE_KEY, JSON.stringify(certs));
-            } catch (e) {
-                console.error("Storage limit reached", e);
-            }
+        function setCertFilter(category, btn) {
+            currentCertCategoryFilter = category;
+            document.querySelectorAll('.cert-filter-btn').forEach(b => {
+                b.className = "cert-filter-btn px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-medium transition shrink-0 text-xs";
+            });
+            btn.className = "cert-filter-btn active px-3 py-1 rounded-full bg-slate-900 text-white font-semibold transition shrink-0 text-xs";
+            handleCertSearchAndFilter();
         }
 
-        function renderCertificates() {
-            const certs = getSavedCertificates();
+        function handleCertSearchAndFilter() {
+            const searchInput = document.getElementById('certSearchInput');
+            const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+
+            const filtered = CERTIFICATES_DATA.filter(cert => {
+                const matchesCategory = currentCertCategoryFilter === 'all' || 
+                    cert.issuer.toLowerCase().includes(currentCertCategoryFilter.toLowerCase());
+                const matchesSearch = !query || 
+                    cert.title.toLowerCase().includes(query) || 
+                    cert.issuer.toLowerCase().includes(query) || 
+                    cert.date.toLowerCase().includes(query) ||
+                    cert.type.toLowerCase().includes(query);
+                return matchesCategory && matchesSearch;
+            });
+
+            renderCertificates(filtered);
+        }
+
+        function renderCertificates(list = CERTIFICATES_DATA) {
             const grid = document.getElementById('certificatesGrid');
             const countBadge = document.getElementById('certCountBadge');
-            if (countBadge) countBadge.textContent = certs.length;
+            if (countBadge) countBadge.textContent = list.length;
 
             if (!grid) return;
             grid.innerHTML = '';
 
-            if (certs.length === 0) {
+            if (list.length === 0) {
                 grid.innerHTML = `
-                    <div class="col-span-full py-8 text-center text-slate-400">
-                        <i class="fa-solid fa-file-circle-plus text-3xl mb-2 text-slate-300"></i>
-                        <p class="text-xs">No certificates added yet. Click <strong>+</strong> above to upload!</p>
+                    <div class="col-span-full py-12 text-center text-slate-400">
+                        <i class="fa-solid fa-magnifying-glass text-3xl mb-2 text-slate-300"></i>
+                        <p class="text-xs font-medium text-slate-500">No matching certificates found. Try another search term or filter!</p>
                     </div>
                 `;
                 return;
             }
 
-            certs.forEach(cert => {
+            list.forEach(cert => {
+                const encodedFallback = createEncodedCertificateSVG(cert);
                 const card = document.createElement('div');
-                card.className = "bg-slate-50 border border-slate-200/90 rounded-xl overflow-hidden hover:shadow-xs hover:border-brand-300 transition flex flex-col justify-between group";
+                card.className = "bg-white border border-slate-200/90 rounded-xl overflow-hidden hover:shadow-md hover:border-brand-300 transition flex flex-col justify-between group";
                 card.innerHTML = `
-                    <div class="relative overflow-hidden cursor-pointer bg-slate-200 h-36" onclick="openCertLightbox('${encodeURIComponent(cert.image)}', '${encodeURIComponent(cert.title)}')">
-                        <img src="${cert.image}" alt="${cert.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
-                            <span class="px-2.5 py-1 rounded-md bg-slate-900/70 text-xs font-semibold backdrop-blur-xs flex items-center gap-1.5">
-                                <i class="fa-solid fa-expand"></i> View Full
+                    <div class="relative overflow-hidden cursor-pointer bg-slate-100 h-44 border-b border-slate-100" onclick="openCertLightbox(this.querySelector('img').src, '${encodeURIComponent(cert.title + ' — ' + cert.issuer)}')">
+                        <img 
+                            src="${cert.image}" 
+                            alt="${cert.title}" 
+                            loading="lazy"
+                            onerror="this.onerror=null; this.src='${encodedFallback}';"
+                            class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300"
+                        >
+                        <div class="absolute top-2 right-2 px-2 py-0.5 rounded bg-slate-900/75 text-white text-[10px] font-mono backdrop-blur-xs">
+                            ${cert.type}
+                        </div>
+                        <div class="absolute inset-0 bg-slate-900/35 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 text-xs font-semibold backdrop-blur-xs flex items-center gap-1.5 shadow-md">
+                                <i class="fa-solid fa-expand"></i> Preview Credential
                             </span>
                         </div>
                     </div>
-                    <div class="p-3 flex-grow flex flex-col justify-between">
+                    <div class="p-3.5 flex-grow flex flex-col justify-between">
                         <div>
-                            <span class="text-[10px] font-mono font-bold text-brand-600 uppercase tracking-wider block mb-0.5">${cert.issuer || 'Official Credential'}</span>
-                            <h5 class="text-xs font-bold text-slate-900 leading-snug line-clamp-2">${cert.title}</h5>
+                            <span class="text-[10px] font-mono font-bold text-brand-600 uppercase tracking-wider block mb-1">${cert.issuer}</span>
+                            <h5 class="text-xs font-bold text-slate-900 leading-snug line-clamp-2" title="${cert.title}">${cert.title}</h5>
                         </div>
-                        <div class="flex items-center justify-between pt-2.5 mt-2 border-t border-slate-200/70 text-[11px] text-slate-400">
-                            <span class="font-mono">${cert.date || 'Verified'}</span>
-                            <button onclick="deleteCertificate('${cert.id}')" class="text-slate-400 hover:text-rose-600 transition p-1" title="Delete certificate">
-                                <i class="fa-regular fa-trash-can"></i>
-                            </button>
+                        <div class="flex items-center justify-between pt-3 mt-3 border-t border-slate-100 text-[11px]">
+                            <span class="font-mono text-slate-500 flex items-center gap-1">
+                                <i class="fa-regular fa-calendar text-slate-400"></i> ${cert.date}
+                            </span>
+                            <a href="${cert.verifyUrl}" target="_blank" rel="noopener noreferrer" class="font-semibold text-brand-600 hover:text-brand-700 flex items-center gap-1 hover:underline">
+                                Verify <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                            </a>
                         </div>
                     </div>
                 `;
@@ -1409,84 +1786,12 @@
             });
         }
 
-        function handleCertFileUpload(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-
-            const defaultName = file.name.replace(/\.[^/.]+$/, "").replace(/[-_]/g, " ");
-            const userTitle = prompt("Enter Certificate Name / Title:", defaultName);
-            if (userTitle === null) {
-                event.target.value = '';
-                return;
-            }
-
-            const issuer = prompt("Enter Issuing Organization (e.g. SLIIT, Google, AWS):", "Verified Credential");
-
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const img = new Image();
-                img.onload = function() {
-                    const canvas = document.createElement('canvas');
-                    const MAX_WIDTH = 900;
-                    const MAX_HEIGHT = 650;
-                    let width = img.width;
-                    let height = img.height;
-
-                    if (width > height) {
-                        if (width > MAX_WIDTH) {
-                            height *= MAX_WIDTH / width;
-                            width = MAX_WIDTH;
-                        }
-                    } else {
-                        if (height > MAX_HEIGHT) {
-                            width *= MAX_HEIGHT / height;
-                            height = MAX_HEIGHT;
-                        }
-                    }
-
-                    canvas.width = width;
-                    canvas.height = height;
-                    const ctx = canvas.getContext('2d');
-                    ctx.drawImage(img, 0, 0, width, height);
-
-                    const compressedBase64 = canvas.toDataURL('image/jpeg', 0.82);
-                    const currentCerts = getSavedCertificates();
-                    const newCert = {
-                        id: 'cert_' + Date.now(),
-                        title: userTitle.trim() || 'Professional Certificate',
-                        issuer: (issuer && issuer.trim()) ? issuer.trim() : 'Verified Credential',
-                        date: new Date().getFullYear().toString(),
-                        image: compressedBase64
-                    };
-
-                    currentCerts.unshift(newCert);
-                    saveCertificatesToStorage(currentCerts);
-                    renderCertificates();
-                };
-                img.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-            event.target.value = '';
-        }
-
-        function deleteCertificate(id) {
-            let certs = getSavedCertificates();
-            certs = certs.filter(c => c.id !== id);
-            saveCertificatesToStorage(certs);
-            renderCertificates();
-        }
-
-        function resetCertificatesToDefault() {
-            saveCertificatesToStorage(DEFAULT_CERTIFICATES);
-            renderCertificates();
-        }
-
         function openCertLightbox(imgUrl, caption) {
             const modal = document.getElementById('certLightboxModal');
             const img = document.getElementById('lightboxImage');
             const cap = document.getElementById('lightboxCaption');
             if (modal && img) {
-                img.src = decodeURIComponent(imgUrl);
+                img.src = imgUrl;
                 if (cap) cap.textContent = decodeURIComponent(caption);
                 modal.classList.add('active');
             }
@@ -1805,6 +2110,7 @@ Here is authentic verified background information about Nipun:
 - Name: Nipun Navodya
 - Education: Undergraduate Student in Information Systems Engineering (ISE) at SLIIT (Faculty of Computing).
 - Target Roles: Agile Project Manager / Scrum Master, Business Analyst (BA), Systems Analyst & Integration Specialist, IT & ERP Support Engineer (Odoo), Software QA Automation Engineer.
+- Certifications: 37+ verified credentials from Duke University, Microsoft, Google Cloud, Atlassian, University of London, Northwestern University, Politecnico di Milano, UC Irvine, University of Washington, and Coursera.
 - Featured 7 Technical Projects & Direct GitHub Repositories:
   1. Agile Task & Project Management (Trello, Jira, ClickUp) -> https://github.com/Nipunnavodya/Agile-Task-and-Project-Management
   2. Business Analysis & Requirements Engineering (Bizagi, Confluence, Miro) -> https://github.com/Nipunnavodya/Business-Analysis-and-Requirements-Engineering
@@ -1998,7 +2304,7 @@ Here is authentic verified background information about Nipun:
             res = res.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
             res = res.replace(/`([^`]+)`/g, '<code class="bg-slate-100 px-1 py-0.5 rounded font-mono text-[11px] text-brand-700">$1</code>');
             res = res.replace(/\n\n/g, '<br><br>');
-            res = res.replace(/\n- /g, '<br>&bull; ');
+            res = res.replace(/\n- /g, '<br>• ');
             res = res.replace(/\n/g, '<br>');
             return res;
         }
@@ -2071,7 +2377,7 @@ Here is authentic verified background information about Nipun:
                 } else if (queryLower.includes("who is") || queryLower.includes("about") || queryLower.includes("sliit")) {
                     fallbackAnswer = "Nipun Navodya is an undergraduate in **Information Systems Engineering at SLIIT**. He specializes in bridging business requirements with technical execution across Agile PM, Systems Integration, and QA Automation.";
                 } else {
-                    fallbackAnswer = "Thank you for reaching out! Nipun is an Information Systems Engineering undergraduate at SLIIT, actively preparing for 2026 internship roles in Agile Project Management, Systems Integration, and QA Engineering. Feel free to explore his 7 Projects or check the Live Utilities!";
+                    fallbackAnswer = "Thank you for reaching out! Nipun is an Information Systems Engineering undergraduate at SLIIT, actively preparing for 2026 internship roles in Agile Project Management, Systems Integration, and QA Engineering. Feel free to explore his 7 Projects or 37+ Verified Certificates!";
                 }
 
                 chatHistory.push({ role: "model", parts: [{ text: fallbackAnswer }] });
